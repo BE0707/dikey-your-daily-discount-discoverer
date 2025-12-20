@@ -25,25 +25,25 @@ const Advantages = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-heading font-bold text-foreground mb-6">
             Herkes İçin Avantajlar
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             İşletmeler gelirlerini artırır, kullanıcılar tasarruf eder
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-10">
           {/* Business Advantages */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-foreground flex items-center justify-center">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-11 h-11 rounded-xl bg-foreground flex items-center justify-center">
                 <Building2 className="w-5 h-5 text-background" />
               </div>
               <h3 className="font-heading text-xl font-bold text-foreground">
@@ -51,24 +51,24 @@ const Advantages = () => {
               </h3>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {businessAdvantages.map((advantage, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="group p-6 rounded-2xl bg-secondary/50 hover:bg-secondary border border-transparent hover:border-border/50 transition-all hover-lift"
+                  className="group p-6 rounded-2xl bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-border/30 transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center flex-shrink-0 group-hover:bg-foreground/20 transition-colors">
+                  <div className="flex items-start gap-5">
+                    <div className="w-12 h-12 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft group-hover:shadow-medium transition-shadow duration-300">
                       <advantage.icon className="w-6 h-6 text-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-heading font-semibold text-foreground mb-1">
+                      <h4 className="font-heading font-semibold text-foreground mb-1.5">
                         {advantage.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -82,33 +82,33 @@ const Advantages = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <User className="w-5 h-5 text-primary-foreground" />
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                <User className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-heading text-xl font-bold text-foreground">
                 Kullanıcılar İçin
               </h3>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {userAdvantages.map((advantage, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="group p-6 rounded-2xl bg-accent/50 hover:bg-accent border border-transparent hover:border-primary/20 transition-all hover-lift"
+                  className="group p-6 rounded-2xl bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-border/30 transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <div className="flex items-start gap-5">
+                    <div className="w-12 h-12 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft group-hover:shadow-medium transition-shadow duration-300">
                       <advantage.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-heading font-semibold text-foreground mb-1">
+                      <h4 className="font-heading font-semibold text-foreground mb-1.5">
                         {advantage.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
                     </div>
                   </div>
                 </motion.div>

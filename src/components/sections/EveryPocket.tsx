@@ -23,22 +23,22 @@ const EveryPocket = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="font-heading font-bold mb-8">
             di<span className="text-primary">K</span>ey Her Cebe Lazım
           </h2>
           
-          <p className="text-background/70 text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-background/60 text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
             diKey; kafe, restoran, mağaza, plaj ve birçok farklı mekânda sunulan özel indirimlerle her cebin vazgeçilmezidir.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
             {categories.map((category, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                className="flex items-center gap-3 px-6 py-3 rounded-full bg-background/10 border border-background/20 hover:bg-background/20 transition-colors cursor-pointer"
+                className="flex items-center gap-3 px-6 py-3 rounded-full bg-background/5 border border-background/10 hover:bg-background/10 transition-colors duration-300"
               >
                 <category.icon className="w-5 h-5 text-primary" />
                 <span className="font-medium">{category.label}</span>
@@ -51,13 +51,13 @@ const EveryPocket = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="relative py-12"
+            className="relative py-8"
           >
-            <div className="text-6xl sm:text-7xl md:text-8xl font-heading font-bold text-background/5 select-none">
+            <div className="text-5xl sm:text-6xl md:text-7xl font-heading font-bold text-background/5 select-none">
               İNDİRİM
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-2xl sm:text-3xl font-heading font-bold text-primary">
+              <div className="text-xl sm:text-2xl font-heading font-semibold text-primary">
                 ₺ Kazan & Tasarruf Et
               </div>
             </div>

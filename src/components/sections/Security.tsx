@@ -31,16 +31,12 @@ const Security = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 mb-6">
-            <Shield className="w-8 h-8 text-primary" />
-          </div>
-          
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-heading font-bold mb-6">
             Güvenlik ve Altyapı
           </h2>
-          <p className="text-background/70 text-lg max-w-2xl mx-auto">
+          <p className="text-background/60 text-lg max-w-xl mx-auto">
             Verileriniz en üst düzey güvenlik standartlarıyla korunur
           </p>
         </motion.div>
@@ -52,32 +48,32 @@ const Security = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="p-8 rounded-2xl bg-background/5 border border-background/10 hover:bg-background/10 transition-colors"
+              className="p-8 rounded-2xl bg-background/5 border border-background/10 hover:bg-background/8 transition-colors duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
-                <feature.icon className="w-7 h-7 text-primary" />
+              <div className="w-12 h-12 rounded-xl bg-background/10 flex items-center justify-center mb-6">
+                <feature.icon className="w-6 h-6 text-background" />
               </div>
-              <h3 className="font-heading text-xl font-semibold mb-3">
+              <h3 className="font-heading text-lg font-semibold mb-3">
                 {feature.title}
               </h3>
-              <p className="text-background/60 leading-relaxed">
+              <p className="text-background/50 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
           ))}
         </div>
 
-        {/* Trust badges */}
+        {/* Trust badges - more minimal */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-12 flex flex-wrap justify-center gap-8"
+          className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-4"
         >
           {["SSL Sertifikalı", "KVKK Uyumlu", "256-bit Şifreleme", "99.9% Uptime"].map((badge, index) => (
-            <div key={index} className="flex items-center gap-2 text-background/70">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">{badge}</span>
+            <div key={index} className="flex items-center gap-2 text-background/50">
+              <CheckCircle className="w-4 h-4" />
+              <span className="text-xs font-medium">{badge}</span>
             </div>
           ))}
         </motion.div>
