@@ -1,51 +1,77 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import dikeyLogo from "@/assets/dikey-logo.png";
 
 const Footer = () => {
   return (
-    <footer id="iletisim" className="bg-foreground text-background py-16">
-      <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer id="iletisim" className="bg-foreground text-background py-20">
+      <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Logo & Tagline */}
           <div className="lg:col-span-2">
-            <div className="mb-4">
-              <span className="font-heading font-bold text-3xl tracking-tight">
-                di<span className="text-primary">k</span>ey
-              </span>
-            </div>
-            <p className="text-background/70 mb-6 max-w-md">
+            <img 
+              src={dikeyLogo} 
+              alt="dikey" 
+              className="h-14 mb-6 brightness-0 invert"
+            />
+            <p className="text-background/50 mb-8 max-w-sm leading-relaxed">
               İndirimlerle dolu bir dünya. Her saat bir fırsat ile yakınındaki en iyi fırsatları keşfet.
             </p>
-            <p className="text-primary font-semibold text-lg">
-              dikey'i hemen indir
-            </p>
+            
+            {/* App Store buttons */}
+            <div className="flex flex-wrap gap-3">
+              <a 
+                href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                <img 
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                  alt="App Store" 
+                  className="h-10"
+                />
+              </a>
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Google Play" 
+                  className="h-10"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">İletişim</h4>
-            <ul className="space-y-3">
+            <h4 className="font-heading font-semibold text-base mb-6">İletişim</h4>
+            <ul className="space-y-4">
               <li>
                 <a 
                   href="mailto:info@dikey.app" 
-                  className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+                  className="flex items-center gap-3 text-background/50 hover:text-background transition-colors"
                 >
-                  <Mail className="w-5 h-5 text-primary" />
-                  <span>info@dikey.app</span>
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">info@dikey.app</span>
                 </a>
               </li>
               <li>
                 <a 
                   href="tel:+902422437007" 
-                  className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+                  className="flex items-center gap-3 text-background/50 hover:text-background transition-colors"
                 >
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span>+90 242 243 70 07</span>
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">+90 242 243 70 07</span>
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-background/70">
-                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Konyaaltı / Antalya</span>
+                <div className="flex items-start gap-3 text-background/50">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Konyaaltı / Antalya</span>
                 </div>
               </li>
             </ul>
@@ -53,8 +79,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Hızlı Bağlantılar</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-semibold text-base mb-6">Hızlı Bağlantılar</h4>
+            <ul className="space-y-3">
               {[
                 { href: "#nasil-kullanilir", label: "Nasıl Kullanılır?" },
                 { href: "#sss", label: "SSS" },
@@ -64,7 +90,7 @@ const Footer = () => {
                 <li key={index}>
                   <a 
                     href={link.href}
-                    className="text-background/70 hover:text-background transition-colors"
+                    className="text-sm text-background/50 hover:text-background transition-colors"
                   >
                     {link.label}
                   </a>
@@ -75,8 +101,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-background/10 text-center">
-          <p className="text-background/50 text-sm">
+        <div className="mt-16 pt-8 border-t border-background/10 text-center">
+          <p className="text-background/40 text-sm">
             © 2025 DiscounTurkey. Tüm hakları saklıdır.
           </p>
         </div>

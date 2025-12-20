@@ -15,23 +15,23 @@ const DiscountHours = () => {
   return (
     <section ref={ref} className="section-padding">
       <div className="container-narrow mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent text-primary text-sm font-medium mb-6">
-              <Clock size={16} />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium mb-8">
+              <Clock size={14} />
               <span>Akıllı Zamanlama</span>
             </div>
             
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="font-heading font-bold text-foreground mb-8">
               Uygun İndirimli Saatler
             </h2>
             
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
               Dikey, "Uygun indirimli saatler" ile belirli zaman aralıklarında en avantajlı hizmet ve ürünleri sunar. Kullanıcılar uygulamayı açarak kendilerine en yakın işletmelerin özel fırsatlarını anında görebilir.
             </p>
 
@@ -42,10 +42,10 @@ const DiscountHours = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-colors duration-300"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-5 h-5 text-primary" />
+                  <div className="w-11 h-11 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft">
+                    <benefit.icon className="w-5 h-5 text-foreground" />
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold text-foreground mb-1">
@@ -65,14 +65,11 @@ const DiscountHours = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative bg-gradient-to-br from-accent via-background to-secondary rounded-3xl p-8 border border-border/50">
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
-              
+            <div className="relative bg-secondary/30 rounded-3xl p-8 border border-border/30">
               {/* Mock Phone UI */}
-              <div className="relative bg-foreground/5 rounded-2xl p-6 space-y-4">
+              <div className="relative bg-background rounded-2xl p-6 space-y-4 shadow-soft">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-primary" />
                   <span className="text-sm font-medium text-foreground">Şu an aktif fırsatlar</span>
                 </div>
                 
@@ -86,13 +83,13 @@ const DiscountHours = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                    className="bg-background rounded-xl p-4 flex items-center justify-between shadow-card"
+                    className="bg-secondary/50 rounded-xl p-4 flex items-center justify-between hover:bg-secondary transition-colors duration-300"
                   >
                     <div>
                       <p className="font-medium text-foreground">{item.name}</p>
-                      <p className="text-xs text-muted-foreground">{item.time}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{item.time}</p>
                     </div>
-                    <div className="bg-primary text-primary-foreground px-3 py-1.5 rounded-lg font-bold text-sm">
+                    <div className="bg-primary/10 text-primary px-3 py-1.5 rounded-lg font-bold text-sm">
                       {item.discount}
                     </div>
                   </motion.div>

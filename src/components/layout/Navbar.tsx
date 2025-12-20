@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import dikeyLogo from "@/assets/dikey-logo.png";
 
 const navLinks = [
   { href: "#nasil-kullanilir", label: "Nasıl kullanılır?" },
-  { href: "#sss", label: "Sıkça sorulan sorular" },
+  { href: "#sss", label: "SSS" },
   { href: "#isletme-kayit", label: "İşletme Kayıt" },
-  { href: "#gizlilik", label: "Gizlilik Politikaları" },
+  { href: "#gizlilik", label: "Gizlilik" },
   { href: "#iletisim", label: "İletişim" },
 ];
 
@@ -15,16 +15,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-      <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/30">
+      <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <div className="flex flex-col items-center">
-              <span className="font-heading font-bold text-2xl tracking-tight text-foreground">
-                di<span className="text-primary">k</span>ey
-              </span>
-            </div>
+          <a href="/" className="flex items-center">
+            <img 
+              src={dikeyLogo} 
+              alt="dikey" 
+              className="h-10 sm:h-12"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -40,14 +40,32 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA - App Store buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Giriş Yap
-            </Button>
-            <Button size="sm">
-              Hemen Katıl
-            </Button>
+            <a 
+              href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-80"
+            >
+              <img 
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                alt="App Store" 
+                className="h-9"
+              />
+            </a>
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-80"
+            >
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                alt="Google Play" 
+                className="h-9"
+              />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,24 +88,42 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-background border-b border-border"
           >
-            <div className="container-narrow mx-auto px-4 py-4 space-y-1">
+            <div className="container-narrow mx-auto px-6 py-6 space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className="block px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-xl transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="pt-4 flex flex-col gap-2">
-                <Button variant="outline" className="w-full">
-                  Giriş Yap
-                </Button>
-                <Button className="w-full">
-                  Hemen Katıl
-                </Button>
+              <div className="pt-6 flex flex-col gap-3">
+                <a 
+                  href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                    alt="App Store" 
+                    className="h-12"
+                  />
+                </a>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                    alt="Google Play" 
+                    className="h-12"
+                  />
+                </a>
               </div>
             </div>
           </motion.div>
