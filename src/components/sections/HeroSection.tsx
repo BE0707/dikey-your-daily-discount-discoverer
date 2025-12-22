@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import dikeyLogo from "@/assets/dikey-logo.png";
+import heroDesktop from "@/assets/hero-desktop.png";
+import heroMobile from "@/assets/hero-mobile.png";
 import { useLanguage } from "@/context/LanguageContext";
 
 const HeroSection = () => {
@@ -15,11 +17,25 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
-      {/* Subtle Background */}
+      {/* Subtle Gradient Base */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
-      
+
+      {/* Hero imagery with Apple-like soft overlay */}
+      <picture className="pointer-events-none absolute inset-0">
+        <source media="(min-width: 768px)" srcSet={heroDesktop} />
+        <img
+          src={heroMobile}
+          alt=""
+          className="h-full w-full object-cover opacity-70 mix-blend-normal"
+          loading="eager"
+        />
+      </picture>
+
+      {/* Soft mask to keep text readable */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/65 to-background/75 backdrop-blur-[2px]" />
+
       {/* Minimal Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:80px_80px] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:80px_80px] opacity-10" />
 
       <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
