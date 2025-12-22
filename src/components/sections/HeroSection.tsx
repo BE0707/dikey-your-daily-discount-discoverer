@@ -46,11 +46,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="mb-10"
           >
-            <img 
-              src={dikeyLogo} 
-              alt="dikey" 
-              className="h-24 sm:h-28 md:h-32 mx-auto"
-            />
+          <motion.img 
+            src={dikeyLogo} 
+            alt="dikey" 
+            className="h-24 sm:h-28 md:h-32 mx-auto"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.5 }}
+            transition={{ duration: 3, ease: "easeInOut" }}
+          />
           </motion.div>
 
           {/* Badge */}

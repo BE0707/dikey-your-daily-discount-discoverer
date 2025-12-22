@@ -17,7 +17,7 @@ const DiscountHours = () => {
   const mockDeals = [
     { name: "Bemily Family Cafe", discount: "%10", time: "14:00 - 17:00" },
     { name: "AntalyaPet Liman", discount: "%15", time: "15:00 - 18:00" },
-    { name: "Therabliss SPA & Masaj", discount: "%40", time: "11:00 - 14:00" },
+    { name: "Therabliss SPA & Masaj", discount: "%25", time: "11:00 - 14:00" },
   ];
 
   return (
