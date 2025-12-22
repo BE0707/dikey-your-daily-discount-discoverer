@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const AnimatedCounter = ({ value, suffix = "", prefix = "", isInView }: { 
   value: number; 
@@ -38,14 +39,15 @@ const AnimatedCounter = ({ value, suffix = "", prefix = "", isInView }: {
 };
 
 const Statistics = () => {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: 1847, suffix: "+", label: "Aktif Kampanya" },
-    { value: 45230, suffix: "", label: "Mutlu Müşteri" },
-    { value: 2.5, prefix: "$", suffix: "M", label: "Toplam Tasarruf" },
-    { value: 853, suffix: "+", label: "Partner İşletme" },
+    { value: 1847, suffix: "+", label: t("hero.stat1") },
+    { value: 45230, suffix: "", label: t("hero.stat2") },
+    { value: 2.5, prefix: "$", suffix: "M", label: t("hero.stat3") },
+    { value: 853, suffix: "+", label: t("hero.stat4") },
   ];
 
   return (
@@ -54,14 +56,14 @@ const Statistics = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-center mb-16"
         >
           <h2 className="font-heading font-bold text-foreground mb-6">
-            Rakamlarla dikey
+            {t("stats.title")}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Güven ve başarının somut göstergeleri
+            {t("stats.subtitle")}
           </p>
         </motion.div>
 
@@ -69,12 +71,13 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              whileHover={{ scale: 1.02 }}
+              className="text-center group cursor-default"
             >
-              <div className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-3">
+              <div className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                 {stat.value === 2.5 ? (
                   <span>{stat.prefix}2.5{stat.suffix}</span>
                 ) : (

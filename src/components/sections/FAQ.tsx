@@ -6,23 +6,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const FAQ = () => {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const faqs = [
     {
-      question: "Dikey nedir?",
-      answer: "Dikey, işletmelerin boş saatlerini değerlendirmesini ve kullanıcıların yakınlarındaki en iyi indirimleri keşfetmesini sağlayan akıllı bir indirim platformudur. Hem işletmeler hem de kullanıcılar için kazan-kazan çözümü sunar."
+      question: t("faq.q1"),
+      answer: t("faq.a1"),
     },
     {
-      question: "Gizlilik ve KVKK hakkında bilgi alabilir miyim?",
-      answer: "Dikey, kullanıcı gizliliğine büyük önem verir. Tüm kişisel veriler KVKK (Kişisel Verilerin Korunması Kanunu) kapsamında işlenir ve korunur. Verileriniz 256-bit şifreleme ile güvence altındadır ve üçüncü taraflarla paylaşılmaz."
+      question: t("faq.q2"),
+      answer: t("faq.a2"),
     },
     {
-      question: "Hesabımı nasıl silebilirim?",
-      answer: "Hesabınızı silmek için uygulama içindeki Ayarlar > Hesap > Hesabı Sil seçeneğini kullanabilirsiniz. Alternatif olarak info@dikey.app adresine e-posta göndererek hesap silme talebinde bulunabilirsiniz. İşlem 48 saat içinde tamamlanır."
+      question: t("faq.q3"),
+      answer: t("faq.a3"),
     },
   ];
 
@@ -32,36 +34,44 @@ const FAQ = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-center mb-16"
         >
           <h2 className="font-heading font-bold text-foreground mb-6">
-            Sıkça Sorulan Sorular
+            {t("faq.title")}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Merak ettiğiniz her şey burada
+            {t("faq.subtitle")}
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-background rounded-2xl border border-border/30 px-6 data-[state=open]:shadow-soft transition-all duration-300"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 15 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline py-6 text-base">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem 
+                  value={`item-${index}`}
+                  className="bg-background rounded-2xl border border-border/30 px-6 data-[state=open]:shadow-soft transition-all duration-300 hover:border-border/50"
+                >
+                  <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline py-6 text-base group">
+                    <span className="group-hover:text-primary transition-colors duration-300">
+                      {faq.question}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
         </motion.div>

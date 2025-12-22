@@ -1,14 +1,14 @@
+@import "@fontsource/sora/400.css";
+@import "@fontsource/sora/500.css";
+@import "@fontsource/sora/600.css";
+@import "@fontsource/sora/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '@fontsource/sora/400.css';
-@import '@fontsource/sora/500.css';
-@import '@fontsource/sora/600.css';
-@import '@fontsource/sora/700.css';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
 
 @layer base {
   :root {
@@ -269,4 +269,78 @@
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Apple-style Marquee Animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* Partner Logo Carousel Animation */
+@keyframes partner-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-partner-scroll {
+  animation: partner-scroll 60s linear infinite;
+}
+
+/* Enhanced Hover Effects */
+.hover-scale {
+  @apply transition-transform duration-300 ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px hsl(4 85% 55% / 0.15);
+}
+
+/* Smooth Button Press Effect */
+.button-press {
+  @apply transition-all duration-150 ease-out;
+}
+
+.button-press:active {
+  transform: scale(0.97);
+}
+
+/* Card Hover Enhancement */
+.card-interactive {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px -10px hsl(0 0% 0% / 0.1);
+}
+
+/* Subtle Parallax Effect */
+.parallax-subtle {
+  will-change: transform;
+}
+
+/* Focus States for Accessibility */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
 }
