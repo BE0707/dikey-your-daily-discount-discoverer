@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import diKeyLogo from "@/assets/diKey-logo.png";
+import dikeyLogo from "@/assets/dikey-logo.png";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 
@@ -20,8 +20,8 @@ const Footer = () => {
           {/* Logo & Tagline */}
           <div className="lg:col-span-2">
             <motion.img 
-              src={diKeyLogo} 
-              alt="diKey" 
+              src={dikeyLogo} 
+              alt="dikey" 
               className="h-14 mb-6 brightness-0 invert"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400 }}

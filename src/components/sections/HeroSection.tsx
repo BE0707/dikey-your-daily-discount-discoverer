@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import diKeyLogo from "@/assets/diKey-logo.png";
+import dikeyLogo from "@/assets/dikey-logo.png";
 import heroDesktop from "@/assets/hero-desktop.png";
 import heroMobile from "@/assets/hero-mobile.png";
 import { useLanguage } from "@/context/LanguageContext";
@@ -47,8 +47,8 @@ const HeroSection = () => {
             className="mb-10"
           >
           <motion.img 
-            src={diKeyLogo} 
-            alt="diKey" 
+            src={dikeyLogo} 
+            alt="dikey" 
             className="h-24 sm:h-28 md:h-32 mx-auto"
             initial={{ scale: 1 }}
             animate={{ scale: 1.5 }}

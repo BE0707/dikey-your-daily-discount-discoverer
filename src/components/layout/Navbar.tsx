@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import diKeyLogo from "@/assets/diKey-logo.png";
+import dikeyLogo from "@/assets/dikey-logo.png";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -24,8 +24,8 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center hover-scale">
             <img 
-              src={diKeyLogo} 
-              alt="diKey" 
+              src={dikeyLogo} 
+              alt="dikey" 
               className="h-10 sm:h-12"
             />
           </a>
