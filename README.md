@@ -1,6 +1,6 @@
-# dikey marketing site
+# diKey marketing site
 
-Single-page, bilingual (TR/EN) landing page for the dikey discount platform. Built with Vite + React + TypeScript, Tailwind, Framer Motion, Radix/shadcn UI, and React Router.
+Single-page, bilingual (TR/EN) landing page for the diKey discount platform. Built with Vite + React + TypeScript, Tailwind, Framer Motion, Radix/shadcn UI, and React Router.
 
 ## Getting started
 ```bash

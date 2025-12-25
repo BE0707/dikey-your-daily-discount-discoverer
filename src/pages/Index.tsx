@@ -21,17 +21,17 @@ const Index = () => {
   
   const seoContent = {
     tr: {
-      title: "dikey - Her Saat Bir Fırsat | İndirimlerle Dolu Bir Dünya",
-      description: "dikey ile yakınındaki en iyi indirim fırsatlarını keşfet. İşletmeler ve kullanıcılar için akıllı indirim platformu. Bütçe dostu, zamana özel fırsatlar.",
-      keywords: "indirim, fırsat, kampanya, dikey, discount, kupon, antalya, türkiye",
-      ogTitle: "dikey - Her Saat Bir Fırsat",
+      title: "diKey - Her Saat Bir Fırsat | İndirimlerle Dolu Bir Dünya",
+      description: "diKey ile yakınındaki en iyi indirim fırsatlarını keşfet. İşletmeler ve kullanıcılar için akıllı indirim platformu. Bütçe dostu, zamana özel fırsatlar.",
+      keywords: "indirim, fırsat, kampanya, diKey, discount, kupon, antalya, türkiye",
+      ogTitle: "diKey - Her Saat Bir Fırsat",
       ogDescription: "İşletmeler ve kullanıcılar için akıllı indirim platformu. Yakınındaki en iyi fırsatları keşfet."
     },
     en: {
-      title: "dikey - Every Hour An Opportunity | A World Full of Discounts",
-      description: "Discover the best discount opportunities near you with dikey. Smart discount platform for businesses and users. Budget-friendly, time-specific deals.",
-      keywords: "discount, deals, campaign, dikey, coupon, antalya, turkey, savings",
-      ogTitle: "dikey - Every Hour An Opportunity",
+      title: "diKey - Every Hour An Opportunity | A World Full of Discounts",
+      description: "Discover the best discount opportunities near you with diKey. Smart discount platform for businesses and users. Budget-friendly, time-specific deals.",
+      keywords: "discount, deals, campaign, diKey, coupon, antalya, turkey, savings",
+      ogTitle: "diKey - Every Hour An Opportunity",
       ogDescription: "Smart discount platform for businesses and users. Discover the best deals near you."
     }
   };
@@ -47,7 +47,7 @@ const Index = () => {
         <meta property="og:title" content={seo.ogTitle} />
         <meta property="og:description" content={seo.ogDescription} />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://dikey.app" />
+        <link rel="canonical" href="https://diKey.app" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

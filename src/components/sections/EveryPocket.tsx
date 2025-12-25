@@ -91,7 +91,7 @@ const EveryPocket = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background/10 to-primary/5 opacity-85" aria-hidden />
               <img
                 src={appImage}
-                alt={language === "tr" ? "dikey uygulama ekran görüntüsü" : "dikey app screenshot"}
+                alt={language === "tr" ? "diKey uygulama ekran görüntüsü" : "diKey app screenshot"}
                 className="relative z-10 w-full h-auto object-cover"
                 loading="lazy"
               />

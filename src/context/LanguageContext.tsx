@@ -29,7 +29,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // World of Discounts
     "world.title": "İndirimlerle Dolu Bir Dünya",
-    "world.description": "Dikey, işbu Gizlilik Politikası ve Aydınlatma Metninde mevzuat veya hizmet koşullarına göre değişiklik yapma hakkını saklı tutar. Güncel sürüm, mobil uygulama veya resmi internet sitesi üzerinden yayımlanır.",
+    "world.description": "diKey, işbu Gizlilik Politikası ve Aydınlatma Metninde mevzuat veya hizmet koşullarına göre değişiklik yapma hakkını saklı tutar. Güncel sürüm, mobil uygulama veya resmi internet sitesi üzerinden yayımlanır.",
     "world.feature1.title": "Kolay Kullanım",
     "world.feature1.desc": "Basit arayüz ile anında fırsatları keşfet",
     "world.feature2.title": "Güvenli Platform",
@@ -40,7 +40,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Discount Hours
     "discount.badge": "Akıllı Zamanlama",
     "discount.title": "Uygun İndirimli Saatler",
-    "discount.description": "Dikey, \"Uygun indirimli saatler\" ile belirli zaman aralıklarında en avantajlı hizmet ve ürünleri sunar. Kullanıcılar uygulamayı açarak kendilerine en yakın işletmelerin özel fırsatlarını anında görebilir.",
+    "discount.description": "diKey, \"Uygun indirimli saatler\" ile belirli zaman aralıklarında en avantajlı hizmet ve ürünleri sunar. Kullanıcılar uygulamayı açarak kendilerine en yakın işletmelerin özel fırsatlarını anında görebilir.",
     "discount.benefit1.title": "Bütçe dostu",
     "discount.benefit1.desc": "Cebine uygun fırsatlar",
     "discount.benefit2.title": "Yeni mekanlar keşfetme",
@@ -126,7 +126,7 @@ const translations: Record<Language, Record<string, string>> = {
     "security.badge4": "99.9% Uptime",
     
     // Statistics
-    "stats.title": "Rakamlarla dikey",
+    "stats.title": "Rakamlarla diKey",
     "stats.subtitle": "Güven ve başarının somut göstergeleri",
     
     // CTA
@@ -136,12 +136,12 @@ const translations: Record<Language, Record<string, string>> = {
     // FAQ
     "faq.title": "Sıkça Sorulan Sorular",
     "faq.subtitle": "Merak ettiğiniz her şey burada",
-    "faq.q1": "Dikey nedir?",
-    "faq.a1": "Dikey, işletmelerin boş saatlerini değerlendirmesini ve kullanıcıların yakınlarındaki en iyi indirimleri keşfetmesini sağlayan akıllı bir indirim platformudur. Hem işletmeler hem de kullanıcılar için kazan-kazan çözümü sunar.",
+    "faq.q1": "diKey nedir?",
+    "faq.a1": "diKey, işletmelerin boş saatlerini değerlendirmesini ve kullanıcıların yakınlarındaki en iyi indirimleri keşfetmesini sağlayan akıllı bir indirim platformudur. Hem işletmeler hem de kullanıcılar için kazan-kazan çözümü sunar.",
     "faq.q2": "Gizlilik ve KVKK hakkında bilgi alabilir miyim?",
-    "faq.a2": "Dikey, kullanıcı gizliliğine büyük önem verir. Tüm kişisel veriler KVKK (Kişisel Verilerin Korunması Kanunu) kapsamında işlenir ve korunur. Verileriniz 256-bit şifreleme ile güvence altındadır ve üçüncü taraflarla paylaşılmaz.",
+    "faq.a2": "diKey, kullanıcı gizliliğine büyük önem verir. Tüm kişisel veriler KVKK (Kişisel Verilerin Korunması Kanunu) kapsamında işlenir ve korunur. Verileriniz 256-bit şifreleme ile güvence altındadır ve üçüncü taraflarla paylaşılmaz.",
     "faq.q3": "Hesabımı nasıl silebilirim?",
-    "faq.a3": "Hesabınızı silmek için uygulama içindeki Ayarlar > Hesap > Hesabı Sil seçeneğini kullanabilirsiniz. Alternatif olarak info@dikey.app adresine e-posta göndererek hesap silme talebinde bulunabilirsiniz. İşlem 48 saat içinde tamamlanır.",
+    "faq.a3": "Hesabınızı silmek için uygulama içindeki Ayarlar > Hesap > Hesabı Sil seçeneğini kullanabilirsiniz. Alternatif olarak info@diKey.app adresine e-posta göndererek hesap silme talebinde bulunabilirsiniz. İşlem 48 saat içinde tamamlanır.",
     
     // Footer
     "footer.tagline": "İndirimlerle dolu bir dünya. Her saat bir fırsat ile yakınındaki en iyi fırsatları keşfet.",
@@ -174,7 +174,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // World of Discounts
     "world.title": "A World Full of Discounts",
-    "world.description": "Dikey reserves the right to make changes to this Privacy Policy and Disclosure Text in accordance with legislation or service conditions. The current version is published via the mobile application or official website.",
+    "world.description": "diKey reserves the right to make changes to this Privacy Policy and Disclosure Text in accordance with legislation or service conditions. The current version is published via the mobile application or official website.",
     "world.feature1.title": "Easy to Use",
     "world.feature1.desc": "Discover deals instantly with a simple interface",
     "world.feature2.title": "Secure Platform",
@@ -185,7 +185,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Discount Hours
     "discount.badge": "Smart Timing",
     "discount.title": "Discounted Happy Hours",
-    "discount.description": "Dikey offers the most advantageous services and products at specific time intervals with \"Discounted happy hours\". Users can instantly see special offers from the nearest businesses by opening the app.",
+    "discount.description": "diKey offers the most advantageous services and products at specific time intervals with \"Discounted happy hours\". Users can instantly see special offers from the nearest businesses by opening the app.",
     "discount.benefit1.title": "Budget-friendly",
     "discount.benefit1.desc": "Deals that fit your pocket",
     "discount.benefit2.title": "Discover new places",
@@ -271,7 +271,7 @@ const translations: Record<Language, Record<string, string>> = {
     "security.badge4": "99.9% Uptime",
     
     // Statistics
-    "stats.title": "dikey in Numbers",
+    "stats.title": "diKey in Numbers",
     "stats.subtitle": "Concrete indicators of trust and success",
     
     // CTA
@@ -281,12 +281,12 @@ const translations: Record<Language, Record<string, string>> = {
     // FAQ
     "faq.title": "Frequently Asked Questions",
     "faq.subtitle": "Everything you want to know is here",
-    "faq.q1": "What is Dikey?",
-    "faq.a1": "Dikey is a smart discount platform that enables businesses to utilize their slow hours and users to discover the best discounts nearby. It offers a win-win solution for both businesses and users.",
+    "faq.q1": "What is diKey?",
+    "faq.a1": "diKey is a smart discount platform that enables businesses to utilize their slow hours and users to discover the best discounts nearby. It offers a win-win solution for both businesses and users.",
     "faq.q2": "Can I get information about privacy and GDPR?",
-    "faq.a2": "Dikey places great importance on user privacy. All personal data is processed and protected under GDPR regulations. Your data is secured with 256-bit encryption and is not shared with third parties.",
+    "faq.a2": "diKey places great importance on user privacy. All personal data is processed and protected under GDPR regulations. Your data is secured with 256-bit encryption and is not shared with third parties.",
     "faq.q3": "How can I delete my account?",
-    "faq.a3": "To delete your account, you can use the Settings > Account > Delete Account option in the app. Alternatively, you can send an email to info@dikey.app to request account deletion. The process is completed within 48 hours.",
+    "faq.a3": "To delete your account, you can use the Settings > Account > Delete Account option in the app. Alternatively, you can send an email to info@diKey.app to request account deletion. The process is completed within 48 hours.",
     
     // Footer
     "footer.tagline": "A world full of discounts. Discover the best deals near you with an opportunity every hour.",
@@ -306,7 +306,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("dikey-lang");
+      const saved = localStorage.getItem("diKey-lang");
       return (saved as Language) || "tr";
     }
     return "tr";
@@ -314,7 +314,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("dikey-lang", lang);
+    localStorage.setItem("diKey-lang", lang);
   };
 
   const t = (key: string): string => {

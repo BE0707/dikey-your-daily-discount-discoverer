@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import dikeyLogo from "@/assets/dikey-logo.png";
+import diKeyLogo from "@/assets/diKey-logo.png";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ const Footer = () => {
   const quickLinks = [
     { href: "#nasil-kullanilir", label: t("nav.howItWorks") },
     { href: "#sss", label: t("nav.faq") },
-    { href: "https://www.dikey.website/Auth/Register/", label: t("nav.businessRegister"), external: true },
+    { href: "https://www.diKey.website/Auth/Register/", label: t("nav.businessRegister"), external: true },
     { href: "#gizlilik", label: t("nav.privacy") },
   ];
 
@@ -20,8 +20,8 @@ const Footer = () => {
           {/* Logo & Tagline */}
           <div className="lg:col-span-2">
             <motion.img 
-              src={dikeyLogo} 
-              alt="dikey" 
+              src={diKeyLogo} 
+              alt="diKey" 
               className="h-14 mb-6 brightness-0 invert"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400 }}
@@ -33,7 +33,7 @@ const Footer = () => {
             {/* App Store buttons */}
             <div className="flex flex-wrap gap-3">
               <a 
-                href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+                href="https://apps.apple.com/tr/app/diKey/id6753873918?l=tr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:opacity-80 hover:scale-105 active:scale-95"
@@ -45,7 +45,7 @@ const Footer = () => {
                 />
               </a>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+                href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:opacity-80 hover:scale-105 active:scale-95"
@@ -65,11 +65,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="mailto:info@dikey.app" 
+                  href="mailto:info@diKey.app" 
                   className="group flex items-center gap-3 text-background/50 hover:text-background transition-colors duration-300"
                 >
                   <Mail className="w-4 h-4 group-hover:text-primary transition-colors duration-300" />
-                  <span className="text-sm">info@dikey.app</span>
+                  <span className="text-sm">info@diKey.app</span>
                 </a>
               </li>
               <li>

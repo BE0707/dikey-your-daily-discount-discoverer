@@ -42,7 +42,7 @@ const CTASection = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <a 
-                href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+                href="https://apps.apple.com/tr/app/diKey/id6753873918?l=tr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg"
@@ -54,7 +54,7 @@ const CTASection = () => {
                 />
               </a>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+                href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg"

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import dikeyLogo from "@/assets/dikey-logo.png";
+import diKeyLogo from "@/assets/diKey-logo.png";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "#nasil-kullanilir", label: t("nav.howItWorks") },
     { href: "#sss", label: t("nav.faq") },
-    { href: "https://www.dikey.website/Auth/Register/", label: t("nav.businessRegister"), external: true },
+    { href: "https://www.diKey.website/Auth/Register/", label: t("nav.businessRegister"), external: true },
     { href: "#gizlilik", label: t("nav.privacy") },
     { href: "#iletisim", label: t("nav.contact") },
   ];
@@ -24,8 +24,8 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center hover-scale">
             <img 
-              src={dikeyLogo} 
-              alt="dikey" 
+              src={diKeyLogo} 
+              alt="diKey" 
               className="h-10 sm:h-12"
             />
           </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="w-px h-6 bg-border/50" />
             <div className="flex items-center gap-3">
               <a 
-                href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+                href="https://apps.apple.com/tr/app/diKey/id6753873918?l=tr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-200 hover:opacity-80 hover:scale-105 active:scale-95"
@@ -64,7 +64,7 @@ const Navbar = () => {
                 />
               </a>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+                href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-200 hover:opacity-80 hover:scale-105 active:scale-95"
@@ -126,7 +126,7 @@ const Navbar = () => {
                 transition={{ delay: 0.3 }}
               >
                 <a 
-                  href="https://apps.apple.com/tr/app/dikey/id6753873918?l=tr"
+                  href="https://apps.apple.com/tr/app/diKey/id6753873918?l=tr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center transition-transform active:scale-95"
@@ -138,7 +138,7 @@ const Navbar = () => {
                   />
                 </a>
                 <a 
-                  href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+                  href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center transition-transform active:scale-95"
