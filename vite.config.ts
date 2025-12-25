@@ -5,7 +5,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Use repo-relative base path for GitHub Pages; "/" in dev for Vite dev server
-  base: mode === "development" ? "/" : "/diKey-your-daily-discount-discoverer/",
+  base: mode === "development" ? "/" : "/dikey-your-daily-discount-discoverer/",
   server: {
     host: "::",
     port: 8080,
