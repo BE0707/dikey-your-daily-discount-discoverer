@@ -29,7 +29,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // World of Discounts
     "world.title": "İndirimlerle Dolu Bir Dünya",
-    "world.description": "Dikey, bulunduğun konum ve saate göre en avantajlı indirimleri anında keşfetmeni sağlayan akıllı bir fırsat platformudur. Kafe, restoran, mağaza ve daha birçok işletmedeki özel teklifleri senin için bir araya getirir; daha az ödeyerek daha fazlasını deneyimlemeni sağlar. Hemen ücretsiz indir, sana en yakın fırsatları keşfet ve indirim kazanmaya şimdi başla.",
+    "world.description": "diKey, bulunduğun konum ve saate göre en avantajlı indirimleri anında keşfetmeni sağlayan akıllı bir fırsat platformudur. Kafe, restoran, mağaza ve daha birçok işletmedeki özel teklifleri senin için bir araya getirir; daha az ödeyerek daha fazlasını deneyimlemeni sağlar. Hemen ücretsiz indir, sana en yakın fırsatları keşfet ve indirim kazanmaya şimdi başla.",
     "world.feature1.title": "Kolay Kullanım",
     "world.feature1.desc": "Basit arayüz ile anında fırsatları keşfet",
     "world.feature2.title": "Güvenli Platform",
@@ -174,7 +174,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // World of Discounts
     "world.title": "A World Full of Discounts",
-    "world.description": "Dikey is a smart opportunity platform that lets you instantly discover the best discounts based on your location and time. It brings together special offers from cafes, restaurants, stores, and many other businesses so you can experience more while paying less. Download for free, find the closest deals, and start saving now.",
+    "world.description": "diKey is a smart opportunity platform that lets you instantly discover the best discounts based on your location and time. It brings together special offers from cafes, restaurants, stores, and many other businesses so you can experience more while paying less. Download for free, find the closest deals, and start saving now.",
     "world.feature1.title": "Easy to Use",
     "world.feature1.desc": "Discover deals instantly with a simple interface",
     "world.feature2.title": "Secure Platform",
