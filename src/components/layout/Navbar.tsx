@@ -13,6 +13,7 @@ const Navbar = () => {
     { href: "#nasil-kullanilir", label: t("nav.howItWorks") },
     { href: "#sss", label: t("nav.faq") },
     { href: "https://www.diKey.website/Auth/Register/", label: t("nav.businessRegister"), external: true },
+    { href: "https://www.dikey.website/Account/Login/?ReturnUrl=%2F", label: t("nav.businessLogin"), external: true },
     { href: "#gizlilik", label: t("nav.privacy") },
     { href: "#iletisim", label: t("nav.contact") },
   ];
@@ -22,11 +23,11 @@ const Navbar = () => {
       <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo */}
-          <a href="/" className="flex items-center hover-scale">
+          <a href="#active-deals" className="flex items-center hover-scale">
             <img 
               src={dikeyLogo} 
               alt="dikey" 
-              className="h-10 sm:h-12"
+              className="h-[4.2rem] sm:h-[4.8rem] transform scale-x-[1.1]"
             />
           </a>
 
@@ -38,7 +39,7 @@ const Navbar = () => {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 group"
+                className="relative px-3 py-2 text-sm font-medium whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors duration-200 group"
               >
                 {link.label}
                 <span className="absolute bottom-1 left-4 right-4 h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />

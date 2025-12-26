@@ -21,7 +21,7 @@ const DiscountHours = () => {
   ];
 
   return (
-    <section ref={ref} className="section-padding">
+    <section ref={ref} id="active-deals" className="section-padding">
       <div className="container-narrow mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Content */}

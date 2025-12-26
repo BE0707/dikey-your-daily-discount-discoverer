@@ -14,6 +14,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.howItWorks": "Nasıl kullanılır?",
     "nav.faq": "SSS",
     "nav.businessRegister": "İşletme Kayıt",
+    "nav.businessLogin": "İşletme Giriş",
     "nav.privacy": "Gizlilik",
     "nav.contact": "İletişim",
     
@@ -29,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // World of Discounts
     "world.title": "İndirimlerle Dolu Bir Dünya",
-    "world.description": "diKey, bulunduğun konum ve saate göre en avantajlı indirimleri anında keşfetmeni sağlayan akıllı bir fırsat platformudur. Kafe, restoran, mağaza ve daha birçok işletmedeki özel teklifleri senin için bir araya getirir; daha az ödeyerek daha fazlasını deneyimlemeni sağlar. Hemen ücretsiz indir, sana en yakın fırsatları keşfet ve indirim kazanmaya şimdi başla.",
+    "world.description": "drdaki diiKey, bulunduğun konum ve saate göre en avantajlı indirimleri anında keşfetmeni sağlayan akıllı bir fırsat platformudur. Kafe, restoran, mağaza ve daha birçok işletmedeki özel teklifleri senin için bir araya getirir; daha az ödeyerek daha fazlasını deneyimlemeni sağlar. Hemen ücretsiz indir, sana en yakın fırsatları keşfet ve indirim kazanmaya şimdi başla.",
     "world.feature1.title": "Kolay Kullanım",
     "world.feature1.desc": "Basit arayüz ile anında fırsatları keşfet",
     "world.feature2.title": "Güvenli Platform",
@@ -159,6 +160,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.howItWorks": "How it works",
     "nav.faq": "FAQ",
     "nav.businessRegister": "Business",
+    "nav.businessLogin": "Business Login",
     "nav.privacy": "Privacy",
     "nav.contact": "Contact",
     

@@ -10,6 +10,7 @@ const Footer = () => {
     { href: "#nasil-kullanilir", label: t("nav.howItWorks") },
     { href: "#sss", label: t("nav.faq") },
     { href: "https://www.diKey.website/Auth/Register/", label: t("nav.businessRegister"), external: true },
+    { href: "https://www.dikey.website/Account/Login/?ReturnUrl=%2F", label: t("nav.businessLogin"), external: true },
     { href: "#gizlilik", label: t("nav.privacy") },
   ];
 
