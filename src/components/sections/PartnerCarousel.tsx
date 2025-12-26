@@ -121,3 +121,4 @@ const PartnerCarousel = () => {
 
 export default PartnerCarousel;
 
+

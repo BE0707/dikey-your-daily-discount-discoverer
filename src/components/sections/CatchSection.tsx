@@ -8,7 +8,7 @@ const CatchSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const discounts = ["30%", "50%", "25%", "40%"];
+  const discounts = ["10%", "20%", "30%", "40%"];
 
   return (
     <section ref={ref} className="section-padding relative overflow-hidden">

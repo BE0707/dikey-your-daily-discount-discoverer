@@ -39,3 +39,4 @@ export const useScrollReveal = (options: UseScrollRevealOptions = {}) => {
 
 export default useScrollReveal;
 
+
