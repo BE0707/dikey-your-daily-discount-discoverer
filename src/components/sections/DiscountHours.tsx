@@ -1,6 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Clock, Wallet, MapPin, Timer } from "lucide-react";
+import logoAntalyaPet from "@/assets/PartnerLogos/AntalyaPet.png";
+import logoTherabliss from "@/assets/PartnerLogos/therabliss.png";
+import logoKasapHasan from "@/assets/PartnerLogos/KasapHasan.png";
+import logoPusula from "@/assets/PartnerLogos/Pusulakırtasiye.png";
+import logoMilaFlowers from "@/assets/PartnerLogos/Milaflowers.png";
+import logoBemilyFamily from "@/assets/PartnerLogos/BemilyFamily.png";
 import { useLanguage } from "@/context/LanguageContext";
 
 const DiscountHours = () => {
@@ -15,10 +21,18 @@ const DiscountHours = () => {
   ];
 
   const mockDeals = [
-    { name: "Bemily Family Cafe", discount: "%10", time: "14:00 - 17:00" },
-    { name: "AntalyaPet Liman", discount: "%15", time: "15:00 - 18:00" },
-    { name: "Therabliss SPA & Masaj", discount: "%25", time: "11:00 - 14:00" },
+    { name: "Bemily Family Cafe", discount: "%10", logo: logoBemilyFamily },
+    { name: "AntalyaPet Liman", discount: "%15", logo: logoAntalyaPet },
+    { name: "Therabliss SPA & Masaj", discount: "%25", logo: logoTherabliss },
+    { name: "Kasap Hasan", discount: "%10", logo: logoKasapHasan },
+    { name: "Pusula Kırtasiye Kültür", discount: "%25", logo: logoPusula },
+    { name: "Antalya Mila flowers", discount: "%10", logo: logoMilaFlowers },
   ];
+
+  const getInitials = (name: string) => {
+    const parts = name.trim().split(" ").filter(Boolean);
+    return (parts[0]?.[0] ?? "").toUpperCase() + (parts[1]?.[0] ?? "").toUpperCase();
+  };
 
   return (
     <section ref={ref} id="active-deals" className="section-padding">
@@ -104,9 +118,20 @@ const DiscountHours = () => {
                     whileHover={{ scale: 1.02, x: 4 }}
                     className="bg-secondary/50 rounded-xl p-4 flex items-center justify-between transition-all duration-300 cursor-pointer hover:bg-secondary"
                   >
-                    <div>
+                    <div className="flex items-center gap-3">
+                      {item.logo ? (
+                        <img
+                          src={item.logo}
+                          alt={`${item.name} logo`}
+                          className="w-10 h-10 rounded-lg object-contain bg-white/70 p-1 border border-border/30 shadow-soft"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-10 h-10 rounded-lg bg-secondary/60 text-foreground/80 font-semibold flex items-center justify-center border border-border/40">
+                          {getInitials(item.name)}
+                        </div>
+                      )}
                       <p className="font-medium text-foreground">{item.name}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">{item.time}</p>
                     </div>
                     <motion.div 
                       className="bg-primary/10 text-primary px-3 py-1.5 rounded-lg font-bold text-sm"
