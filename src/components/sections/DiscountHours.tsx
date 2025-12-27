@@ -116,9 +116,9 @@ const DiscountHours = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                     whileHover={{ scale: 1.02, x: 4 }}
-                    className="bg-secondary/50 rounded-xl p-4 flex items-center justify-between transition-all duration-300 cursor-pointer hover:bg-secondary"
+                    className="bg-secondary/50 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 sm:justify-between transition-all duration-300 cursor-pointer hover:bg-secondary"
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 w-full sm:w-auto">
                       {item.logo ? (
                         <img
                           src={item.logo}
@@ -134,7 +134,7 @@ const DiscountHours = () => {
                       <p className="font-medium text-foreground">{item.name}</p>
                     </div>
                     <motion.div 
-                      className="bg-primary/10 text-primary px-3 py-1.5 rounded-lg font-bold text-sm"
+                      className="bg-primary/10 text-primary px-3 py-1.5 rounded-lg font-bold text-sm self-start sm:self-auto"
                       whileHover={{ scale: 1.05 }}
                     >
                       {item.discount}
