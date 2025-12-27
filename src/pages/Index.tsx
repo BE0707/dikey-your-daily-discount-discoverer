@@ -11,7 +11,6 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import Advantages from "@/components/sections/Advantages";
 import PartnerCarousel from "@/components/sections/PartnerCarousel";
 import Security from "@/components/sections/Security";
-import Statistics from "@/components/sections/Statistics";
 import CTASection from "@/components/sections/CTASection";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/layout/Footer";
@@ -62,7 +61,6 @@ const Index = () => {
         <Advantages />
         <PartnerCarousel />
         <Security />
-        <Statistics />
         <CTASection />
         <FAQ />
         <Footer />

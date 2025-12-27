@@ -1,18 +1,64 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { Sparkles } from "lucide-react";
 import dikeyLogo from "@/assets/dikey-logo.png";
 import heroDesktop from "@/assets/hero-desktop.png";
 import heroMobile from "@/assets/hero-mobile.png";
 import { useLanguage } from "@/context/LanguageContext";
 
+const AnimatedCounter = ({
+  value,
+  suffix = "",
+  prefix = "",
+  isInView,
+}: {
+  value: number;
+  suffix?: string;
+  prefix?: string;
+  isInView: boolean;
+}) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = value / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [value, isInView]);
+
+  return (
+    <span>
+      {prefix}
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  );
+};
+
 const HeroSection = () => {
   const { t } = useLanguage();
+  const statsRef = useRef(null);
+  const statsInView = useInView(statsRef, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: "1,847+", label: t("hero.stat1") },
-    { value: "45K+", label: t("hero.stat2") },
-    { value: "$2.5M", label: t("hero.stat3") },
-    { value: "853+", label: t("hero.stat4") },
+    { value: 1847, suffix: "+", label: t("hero.stat1"), prefix: "" },
+    { value: 45000, suffix: "+", label: t("hero.stat2"), prefix: "" },
+    { value: 1, suffix: "M", label: t("hero.stat3"), prefix: "₺" },
+    { value: 160, suffix: "+", label: t("hero.stat4"), prefix: "" },
   ];
 
   return (
@@ -125,11 +171,20 @@ const HeroSection = () => {
 
           {/* Stats Preview */}
           <motion.div
+            ref={statsRef}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="mt-24 pt-16 border-t border-border/30"
           >
+            <div className="mb-8">
+              <h3 className="font-heading text-sm sm:text-base uppercase tracking-[0.18em] text-primary/80 font-semibold">
+                {t("stats.title")}
+              </h3>
+              <p className="text-muted-foreground mt-2">
+                {t("stats.subtitle")}
+              </p>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {stats.map((stat, index) => (
                 <motion.div 
@@ -140,7 +195,12 @@ const HeroSection = () => {
                   transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                 >
                   <div className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                    {stat.value}
+                    <AnimatedCounter
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      prefix={stat.prefix}
+                      isInView={statsInView}
+                    />
                   </div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
                 </motion.div>
