@@ -70,7 +70,7 @@ const PartnerCarousel = () => {
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="max-w-full max-h-full object-contain filter grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100"
+                        className="max-w-full max-h-full object-contain transition-all duration-500"
                       />
                     </div>
                     {/* Tooltip on hover */}
