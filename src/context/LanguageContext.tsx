@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // World of Discounts
     "world.title": "İndirimlerle Dolu Bir Dünya",
-    "world.description": "drdaki diiKey, bulunduğun konum ve saate göre en avantajlı indirimleri anında keşfetmeni sağlayan akıllı bir fırsat platformudur. Kafe, restoran, mağaza ve daha birçok işletmedeki özel teklifleri senin için bir araya getirir; daha az ödeyerek daha fazlasını deneyimlemeni sağlar. Hemen ücretsiz indir, sana en yakın fırsatları keşfet ve indirim kazanmaya şimdi başla.",
+    "world.description": "diKey, bulunduğun konum ve saate göre en avantajlı indirimleri anında keşfetmeni sağlayan akıllı bir fırsat platformudur. Kafe, restoran, mağaza ve daha birçok işletmedeki özel teklifleri senin için bir araya getirir; daha az ödeyerek daha fazlasını deneyimlemeni sağlar. Hemen ücretsiz indir, sana en yakın fırsatları keşfet ve indirim kazanmaya şimdi başla.",
     "world.feature1.title": "Kolay Kullanım",
     "world.feature1.desc": "Basit arayüz ile anında fırsatları keşfet",
     "world.feature2.title": "Güvenli Platform",
