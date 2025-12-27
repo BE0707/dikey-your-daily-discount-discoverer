@@ -37,104 +37,109 @@ const Advantages = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
-          {/* Business Advantages */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            <div className="flex items-center gap-4 mb-8">
-              <motion.div 
-                className="w-11 h-11 rounded-xl bg-foreground flex items-center justify-center"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400 }}
+        <div className="relative mt-12 rounded-3xl p-[2px] overflow-hidden bg-gradient-to-tr from-primary/25 via-primary/10 to-transparent shadow-[0_25px_70px_-35px_rgba(239,68,68,0.35)]">
+          <div className="absolute inset-0 blur-3xl bg-gradient-to-tr from-primary/12 via-primary/6 to-transparent pointer-events-none" />
+          <div className="relative rounded-[26px] bg-background/90 backdrop-blur-sm border border-primary/10 p-6 sm:p-8 lg:p-12">
+            <div className="grid lg:grid-cols-2 gap-10">
+              {/* Business Advantages */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <Building2 className="w-5 h-5 text-background" />
-              </motion.div>
-              <h3 className="font-heading text-xl font-bold text-foreground">
-                {t("adv.forBusiness")}
-              </h3>
-            </div>
+                <div className="flex items-center gap-4 mb-8">
+                  <motion.div 
+                    className="w-11 h-11 rounded-xl bg-foreground flex items-center justify-center"
+                    whileHover={{ scale: 1.05, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  >
+                    <Building2 className="w-5 h-5 text-background" />
+                  </motion.div>
+                  <h3 className="font-heading text-xl font-bold text-foreground">
+                    {t("adv.forBusiness")}
+                  </h3>
+                </div>
 
-            <div className="space-y-5">
-              {businessAdvantages.map((advantage, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  whileHover={{ y: -2 }}
-                  className="group p-6 rounded-2xl bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-border/30 transition-all duration-300 cursor-default"
-                >
-                  <div className="flex items-start gap-5">
-                    <motion.div 
-                      className="w-12 h-12 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft group-hover:shadow-medium transition-shadow duration-300"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ type: "spring", stiffness: 400 }}
+                <div className="space-y-5">
+                  {businessAdvantages.map((advantage, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.5, delay: 0.3 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      whileHover={{ y: -2 }}
+                      className="group p-6 rounded-2xl bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-border/30 transition-all duration-300 cursor-default"
                     >
-                      <advantage.icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors duration-300" />
+                      <div className="flex items-start gap-5">
+                        <motion.div 
+                          className="w-12 h-12 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft group-hover:shadow-medium transition-shadow duration-300"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ type: "spring", stiffness: 400 }}
+                        >
+                          <advantage.icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors duration-300" />
+                        </motion.div>
+                        <div>
+                          <h4 className="font-heading font-semibold text-foreground mb-1.5">
+                            {advantage.title}
+                          </h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
+                        </div>
+                      </div>
                     </motion.div>
-                    <div>
-                      <h4 className="font-heading font-semibold text-foreground mb-1.5">
-                        {advantage.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                  ))}
+                </div>
+              </motion.div>
 
-          {/* User Advantages */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            <div className="flex items-center gap-4 mb-8">
-              <motion.div 
-                className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center"
-                whileHover={{ scale: 1.05, rotate: -5 }}
-                transition={{ type: "spring", stiffness: 400 }}
+              {/* User Advantages */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <User className="w-5 h-5 text-primary" />
-              </motion.div>
-              <h3 className="font-heading text-xl font-bold text-foreground">
-                {t("adv.forUsers")}
-              </h3>
-            </div>
+                <div className="flex items-center gap-4 mb-8">
+                  <motion.div 
+                    className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center"
+                    whileHover={{ scale: 1.05, rotate: -5 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  >
+                    <User className="w-5 h-5 text-primary" />
+                  </motion.div>
+                  <h3 className="font-heading text-xl font-bold text-foreground">
+                    {t("adv.forUsers")}
+                  </h3>
+                </div>
 
-            <div className="space-y-5">
-              {userAdvantages.map((advantage, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  whileHover={{ y: -2 }}
-                  className="group p-6 rounded-2xl bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-border/30 transition-all duration-300 cursor-default"
-                >
-                  <div className="flex items-start gap-5">
-                    <motion.div 
-                      className="w-12 h-12 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft group-hover:shadow-medium transition-shadow duration-300"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ type: "spring", stiffness: 400 }}
+                <div className="space-y-5">
+                  {userAdvantages.map((advantage, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      whileHover={{ y: -2 }}
+                      className="group p-6 rounded-2xl bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-border/30 transition-all duration-300 cursor-default"
                     >
-                      <advantage.icon className="w-6 h-6 text-primary" />
+                      <div className="flex items-start gap-5">
+                        <motion.div 
+                          className="w-12 h-12 rounded-xl bg-background flex items-center justify-center flex-shrink-0 shadow-soft group-hover:shadow-medium transition-shadow duration-300"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ type: "spring", stiffness: 400 }}
+                        >
+                          <advantage.icon className="w-6 h-6 text-primary" />
+                        </motion.div>
+                        <div>
+                          <h4 className="font-heading font-semibold text-foreground mb-1.5">
+                            {advantage.title}
+                          </h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
+                        </div>
+                      </div>
                     </motion.div>
-                    <div>
-                      <h4 className="font-heading font-semibold text-foreground mb-1.5">
-                        {advantage.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  ))}
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

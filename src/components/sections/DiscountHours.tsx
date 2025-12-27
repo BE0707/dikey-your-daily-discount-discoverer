@@ -23,7 +23,10 @@ const DiscountHours = () => {
   return (
     <section ref={ref} id="active-deals" className="section-padding">
       <div className="container-narrow mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="relative rounded-3xl p-[2px] overflow-hidden bg-gradient-to-br from-primary/30 via-primary/10 to-transparent shadow-[0_25px_70px_-35px_rgba(239,68,68,0.45)]">
+          <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-primary/15 via-primary/5 to-transparent pointer-events-none" />
+          <div className="relative rounded-[26px] bg-background/85 backdrop-blur-sm border border-primary/10 p-6 sm:p-8 lg:p-12">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -116,6 +119,8 @@ const DiscountHours = () => {
               </div>
             </div>
           </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
