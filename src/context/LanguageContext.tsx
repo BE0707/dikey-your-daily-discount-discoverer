@@ -64,9 +64,9 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Catch Section
     "catch.title1": "Kaçırma,",
-    "catch.title2": "Yakala,",
-    "catch.title3": "Kazan!",
-    "catch.description": "Fırsatlar beklemez. Sen de hızlı ol, en iyi indirimleri yakala!",
+    "catch.title2": "diKey'i",
+    "catch.title3": "kontrol et.",
+    "catch.description": "Fırsatlar birçok sektörde geçerlidir. Ve sürekli yayılıyoruz!",
     
     // How It Works
     "how.title": "Nasıl Çalışır?",
@@ -153,7 +153,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Marquee
     "marquee.1": "İndirimlerle Dolu Bir Dünya",
     "marquee.2": "Her Saat Bir Fırsat",
-    "marquee.3": "Kaçırma · Yakala · Kazan",
+    "marquee.3": "Kaçırma, diKey'i kontrol et",
   },
   en: {
     // Navbar
@@ -210,9 +210,9 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Catch Section
     "catch.title1": "Don't Miss,",
-    "catch.title2": "Catch,",
-    "catch.title3": "Win!",
-    "catch.description": "Opportunities don't wait. Be quick and catch the best discounts!",
+    "catch.title2": "check",
+    "catch.title3": "diKey.",
+    "catch.description": "Opportunities exist across many sectors. And we're constantly expanding!",
     
     // How It Works
     "how.title": "How It Works",
@@ -299,7 +299,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Marquee
     "marquee.1": "A World Full of Discounts",
     "marquee.2": "Every Hour An Opportunity",
-    "marquee.3": "Don't Miss · Catch · Win",
+    "marquee.3": "Don't miss, check diKey",
   },
 };
 

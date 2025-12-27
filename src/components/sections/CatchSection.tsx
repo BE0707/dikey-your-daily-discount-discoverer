@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, Target, Trophy } from "lucide-react";
+import { UtensilsCrossed, Bone, Scissors, Percent } from "lucide-react";
+import sign from "@/assets/sign.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const CatchSection = () => {
@@ -13,9 +14,24 @@ const CatchSection = () => {
   return (
     <section ref={ref} className="section-padding relative overflow-hidden">
       {/* Subtle background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-background to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-background" />
+      <div
+        className="absolute inset-0 flex items-end justify-center pointer-events-none"
+        style={{ transform: "translateY(60%)" }}
+      >
+        <img
+          src={sign}
+          alt="diKey background mark"
+          className="h-[1242px] w-[1242px] opacity-10"
+          style={{
+            filter:
+              "invert(22%) sepia(94%) saturate(4115%) hue-rotate(353deg) brightness(88%) contrast(104%)",
+          }}
+          loading="lazy"
+        />
+      </div>
       
-      <div className="container-narrow mx-auto relative">
+      <div className="container-narrow mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -23,7 +39,7 @@ const CatchSection = () => {
           className="text-center"
         >
           <div className="flex justify-center gap-4 mb-10">
-            {[Zap, Target, Trophy].map((Icon, index) => (
+            {[UtensilsCrossed, Bone, Scissors, Percent].map((Icon, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0, rotate: -10 }}
