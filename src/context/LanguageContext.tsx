@@ -154,6 +154,11 @@ const translations: Record<Language, Record<string, string>> = {
     "marquee.1": "İndirimlerle Dolu Bir Dünya",
     "marquee.2": "Her Saat Bir Fırsat",
     "marquee.3": "Kaçırma, diKey'i kontrol et",
+    "marquee.4": "Her Yerde Fırsat, Her An Kazanç",
+
+    // Ad Showcase
+    "ad.headlinePrefix": "Şehrin her köşesinde indirimler ve avantajlar cebinde. Hepsi",
+    "ad.brand": "diKey’de.",
   },
   en: {
     // Navbar
@@ -300,6 +305,11 @@ const translations: Record<Language, Record<string, string>> = {
     "marquee.1": "A World Full of Discounts",
     "marquee.2": "Every Hour An Opportunity",
     "marquee.3": "Don't miss, check diKey",
+    "marquee.4": "Opportunities Everywhere, Savings Anytime",
+
+    // Ad Showcase
+    "ad.headlinePrefix": "Discounts and perks across the city. All at",
+    "ad.brand": "diKey.",
   },
 };
 

@@ -14,6 +14,8 @@ const MarqueeSection = () => {
     SIGN,
     t("marquee.3"),
     SIGN,
+    t("marquee.4"),
+    SIGN,
   ];
 
   return (
