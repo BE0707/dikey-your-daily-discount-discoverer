@@ -1,6 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
-import sign from "@/assets/sign.svg";
+import sign from "@/assets/logowithoutbrand.png";
 
 const MarqueeSection = () => {
   const { t } = useLanguage();
@@ -38,11 +38,7 @@ const MarqueeSection = () => {
                     <img
                       src={sign}
                       alt="diKey symbol"
-                      className="h-10 w-auto opacity-80"
-                      style={{
-                        filter:
-                          "invert(22%) sepia(94%) saturate(4115%) hue-rotate(353deg) brightness(88%) contrast(104%)",
-                      }}
+                      className="h-14 w-auto opacity-80"
                       loading="lazy"
                     />
                   </span>

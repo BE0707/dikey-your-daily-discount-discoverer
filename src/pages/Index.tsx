@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import MarqueeSection from "@/components/sections/MarqueeSection";
 import WorldOfDiscounts from "@/components/sections/WorldOfDiscounts";
+import AdShowcase from "@/components/sections/AdShowcase";
 import DiscountHours from "@/components/sections/DiscountHours";
 import EveryPocket from "@/components/sections/EveryPocket";
 import CatchSection from "@/components/sections/CatchSection";
@@ -54,6 +55,7 @@ const Index = () => {
         <HeroSection />
         <MarqueeSection />
         <WorldOfDiscounts />
+        <AdShowcase />
         <DiscountHours />
         <EveryPocket />
         <CatchSection />
