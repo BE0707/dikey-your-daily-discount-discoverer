@@ -23,8 +23,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="nasil-kullanilir" ref={ref} className="section-padding bg-secondary/20">
-      <div className="container-narrow mx-auto">
+    <section id="nasil-kullanilir" ref={ref} className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 bg-primary/10" />
+      <div className="container-narrow mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
