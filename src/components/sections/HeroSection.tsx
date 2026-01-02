@@ -57,7 +57,7 @@ const HeroSection = () => {
   const stats = [
     { value: 1200, suffix: "+", label: t("hero.stat1"), prefix: "" },
     { value: 5000, suffix: "+", label: t("hero.stat2"), prefix: "" },
-    { value: 1, suffix: "M", label: t("hero.stat3"), prefix: "₺" },
+    { value: 1, suffix: "M+", label: t("hero.stat3"), prefix: "₺" },
     { value: 160, suffix: "+", label: t("hero.stat4"), prefix: "" },
   ];
 
