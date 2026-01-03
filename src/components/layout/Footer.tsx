@@ -46,7 +46,7 @@ const Footer = () => {
                 />
               </a>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
+                href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:opacity-80 hover:scale-105 active:scale-95"

@@ -65,7 +65,7 @@ const Navbar = () => {
                 />
               </a>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
+                href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-200 hover:opacity-80 hover:scale-105 active:scale-95"
@@ -139,7 +139,7 @@ const Navbar = () => {
                   />
                 </a>
                 <a 
-                  href="https://play.google.com/store/apps/details?id=com.diKey.discounturkey"
+                  href="https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center transition-transform active:scale-95"
