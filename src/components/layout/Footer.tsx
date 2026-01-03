@@ -23,7 +23,7 @@ const Footer = () => {
             <motion.img 
               src={dikeyLogo} 
               alt="dikey" 
-              className="h-14 mb-6 brightness-0 invert"
+              className="h-[6.65rem] mb-6 brightness-0 invert"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400 }}
             />
