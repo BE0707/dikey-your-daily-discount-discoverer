@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Clock, Wallet, MapPin, Timer } from "lucide-react";
 import logoAntalyaPet from "@/assets/PartnerLogos/AntalyaPet.png";
 import logoTherabliss from "@/assets/PartnerLogos/therabliss.png";
-import logoKasapHasan from "@/assets/PartnerLogos/KasapHasan.png";
+import logoUnderstone from "@/assets/PartnerLogos/Understone.png";
 import logoPusula from "@/assets/PartnerLogos/Pusulakırtasiye.png";
 import logoMilaFlowers from "@/assets/PartnerLogos/Milaflowers.png";
 import logoBemilyFamily from "@/assets/PartnerLogos/BemilyFamily.png";
@@ -24,7 +24,7 @@ const DiscountHours = () => {
     { name: "Bemily Family Cafe", discount: "%10", logo: logoBemilyFamily },
     { name: "AntalyaPet Liman", discount: "%15", logo: logoAntalyaPet },
     { name: "Therabliss SPA & Masaj", discount: "%25", logo: logoTherabliss },
-    { name: "Kasap Hasan", discount: "%10", logo: logoKasapHasan },
+    { name: "Understone coffe Konyaaltı", discount: "%10", logo: logoUnderstone },
     { name: "Pusula Kırtasiye Kültür", discount: "%25", logo: logoPusula },
     { name: "Antalya Mila flowers", discount: "%10", logo: logoMilaFlowers },
   ];
