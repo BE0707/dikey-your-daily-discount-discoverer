@@ -27,7 +27,7 @@ const Navbar = () => {
             <img 
               src={dikeyLogo} 
               alt="dikey" 
-              className="h-[8rem] sm:h-[9.2rem] transform scale-x-[1.1]"
+              className="h-12 sm:h-14"
             />
           </a>
 
