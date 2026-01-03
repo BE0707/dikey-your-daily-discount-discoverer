@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import dikeyLogo from "@/assets/dikey-logo.png";
+import dikeyLogo from "@/assets/horizontalLogoNoBG.png";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 
