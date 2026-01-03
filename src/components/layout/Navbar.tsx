@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import dikeyLogo from "@/assets/horizontalLogoNoBG.png";
+import dikeyLogo from "@/assets/dikey-logo.png";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -27,7 +27,7 @@ const Navbar = () => {
             <img 
               src={dikeyLogo} 
               alt="dikey" 
-              className="h-[8rem] sm:h-[9.2rem] transform scale-x-[1.1]"
+              className="h-[8rem] sm:h-[9.2rem] object-contain py-2 px-1 transform scale-x-[1.1]"
             />
           </a>
 
