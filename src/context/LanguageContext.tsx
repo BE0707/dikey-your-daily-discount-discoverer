@@ -127,7 +127,7 @@ const translations: Record<Language, Record<string, string>> = {
     "security.badge4": "99.9% Uptime",
     
     // Statistics
-    "stats.title": "Rakamlarla diKey",
+    "stats.title": "RAKAMLARLA diKey",
     "stats.subtitle": "Güven ve başarının somut göstergeleri",
     
     // CTA
