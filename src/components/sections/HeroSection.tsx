@@ -178,7 +178,7 @@ const HeroSection = () => {
             className="mt-24 pt-16 border-t border-border/30"
           >
             <div className="mb-8">
-              <h3 className="font-heading text-sm sm:text-base uppercase tracking-[0.18em] text-primary/80 font-semibold">
+              <h3 className="font-heading text-sm sm:text-base tracking-[0.18em] text-primary/80 font-semibold">
                 {t("stats.title")}
               </h3>
               <p className="text-muted-foreground mt-2">
