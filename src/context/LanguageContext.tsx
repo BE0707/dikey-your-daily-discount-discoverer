@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-type Language = "tr" | "en";
+type Language = "tr" | "en" | "de";
 
 interface LanguageContextType {
   language: Language;
@@ -309,6 +309,157 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Ad Showcase
     "ad.headlinePrefix": "Discounts and perks across the city. All at",
+    "ad.brand": "diKey.",
+  },
+  de: {
+    // Navbar
+    "nav.howItWorks": "Wie funktioniert es?",
+    "nav.faq": "Häufige Fragen",
+    "nav.businessRegister": "Unternehmensregistrierung",
+    "nav.businessLogin": "Unternehmenslogin",
+    "nav.privacy": "Datenschutz",
+    "nav.contact": "Kontakt",
+    
+    // Hero Section
+    "hero.badge": "Eine Welt voller Rabatte",
+    "hero.title1": "Jede Stunde",
+    "hero.title2": "eine Chance",
+    "hero.subtitle": "Die intelligente Rabattplattform für Unternehmen und Nutzer. Entdecke die besten Angebote in deiner Nähe und profitiere sofort.",
+    "hero.stat1": "Aktive Kampagnen",
+    "hero.stat2": "Zufriedene Kunden",
+    "hero.stat3": "Gesamte Ersparnis",
+    "hero.stat4": "Partnerunternehmen",
+    
+    // World of Discounts
+    "world.title": "Eine Welt voller Rabatte",
+    "world.description": "diKey ist eine intelligente Angebotsplattform, mit der du je nach Standort und Uhrzeit sofort die besten Rabatte entdecken kannst. Sie bündelt exklusive Angebote aus Cafés, Restaurants, Geschäften und vielen weiteren Betrieben. So erlebst du mehr – und zahlst weniger. Lade die App jetzt kostenlos herunter, entdecke Angebote in deiner Nähe und spare sofort.",
+    "world.feature1.title": "Einfache Nutzung",
+    "world.feature1.desc": "Entdecke Angebote sofort dank intuitiver Oberfläche",
+    "world.feature2.title": "Sichere Plattform",
+    "world.feature2.desc": "DSGVO-konforme und verschlüsselte Datenverarbeitung",
+    "world.feature3.title": "Großes Netzwerk",
+    "world.feature3.desc": "Wachsendes Ökosystem mit hunderten Partnern",
+    
+    // Discount Hours
+    "discount.badge": "Intelligente Zeitsteuerung",
+    "discount.title": "Vorteilhafte Rabattzeiten",
+    "discount.description": "Mit \"vorteilhaften Rabattzeiten\" bietet diKey zu bestimmten Zeitfenstern besonders attraktive Angebote. Nutzer sehen beim Öffnen der App sofort exklusive Angebote von Betrieben in ihrer Nähe.",
+    "discount.benefit1.title": "Budgetfreundlich",
+    "discount.benefit1.desc": "Angebote passend zu deinem Budget",
+    "discount.benefit2.title": "Neue Orte entdecken",
+    "discount.benefit2.desc": "Finde Betriebe in deiner Nähe",
+    "discount.benefit3.title": "Zeitlich begrenzte Angebote",
+    "discount.benefit3.desc": "Rabatte zu den besten Zeiten",
+    "discount.activeDeals": "Aktuell verfügbare Angebote",
+    
+    // Every Pocket
+    "pocket.title1": "di",
+    "pocket.titleK": "K",
+    "pocket.title2": "ey für jede Tasche",
+    "pocket.description": "diKey ist unverzichtbar für jede Tasche mit speziellen Rabatten in Cafés, Restaurants, Geschäften, Stränden und vielen anderen Orten.",
+    "pocket.cafe": "Café",
+    "pocket.restaurant": "Restaurant",
+    "pocket.store": "Geschäft",
+    "pocket.beach": "Strand",
+    "pocket.more": "Und vieles mehr",
+    "pocket.earn": "€ Verdienen & Sparen",
+    
+    // Catch Section
+    "catch.title1": "Verpasse es nicht,",
+    "catch.title2": "check",
+    "catch.title3": "diKey.",
+    "catch.description": "Angebote gibt es in vielen Branchen. Und wir wachsen ständig!",
+    
+    // How It Works
+    "how.title": "Wie funktioniert es?",
+    "how.subtitle": "Starte mit einfachen Schritten für Unternehmen und Nutzer",
+    "how.forBusiness": "Für Unternehmen",
+    "how.forUsers": "Für Nutzer",
+    "how.b1.title": "Registrieren",
+    "how.b1.desc": "Unternehmen schnell anlegen",
+    "how.b2.title": "Rabattzeiten festlegen",
+    "how.b2.desc": "Rabattzeiten konfigurieren",
+    "how.b3.title": "QR-Code scannen",
+    "how.b3.desc": "QR-Code des Kunden scannen",
+    "how.b4.title": "Rabatt automatisch anwenden",
+    "how.b4.desc": "Automatischer Rabatt wird angewendet",
+    "how.u1.title": "App herunterladen",
+    "how.u1.desc": "Von iOS oder Android herunterladen",
+    "how.u2.title": "Angebot auswählen",
+    "how.u2.desc": "Angebote in deiner Nähe entdecken",
+    "how.u3.title": "QR-Code vorzeigen",
+    "how.u3.desc": "QR-Code im Geschäft vorzeigen",
+    "how.u4.title": "Rabatt genießen",
+    "how.u4.desc": "Sofort sparen",
+    
+    // Advantages
+    "adv.title": "Vorteile für alle",
+    "adv.subtitle": "Unternehmen steigern Umsätze, Nutzer sparen Geld",
+    "adv.forBusiness": "Für Unternehmen",
+    "adv.forUsers": "Für Nutzer",
+    "adv.b1.title": "Leerlaufzeiten in Umsatz verwandeln",
+    "adv.b1.desc": "Kunden in ruhigen Stunden anlocken",
+    "adv.b2.title": "Stammkunden aufbauen",
+    "adv.b2.desc": "Mit wiederkehrenden Kunden wachsen",
+    "adv.b3.title": "Kampagnen in Echtzeit steuern",
+    "adv.b3.desc": "Angebote sofort anpassen",
+    "adv.u1.title": "Exklusive Angebote bei ausgewählten Betrieben",
+    "adv.u1.desc": "Rabattierte Erlebnisse an Premium-Standorten",
+    "adv.u2.title": "Standortbasierte Angebotsentdeckung",
+    "adv.u2.desc": "Beste Angebote in deiner Nähe finden",
+    "adv.u3.title": "Sichere und geprüfte Rabatte",
+    "adv.u3.desc": "Verifizierte und sichere Betriebe",
+    
+    // Partner Section
+    "partner.title": "Unser Partnernetzwerk",
+    "partner.subtitle": "Ein wachsendes Ökosystem vertrauenswürdiger Unternehmen.",
+    
+    // Security
+    "security.title": "Sicherheit & Infrastruktur",
+    "security.subtitle": "Deine Daten sind nach höchsten Sicherheitsstandards geschützt",
+    "security.f1.title": "DSGVO-konforme Datenverwaltung",
+    "security.f1.desc": "Alle Daten werden gesetzeskonform verarbeitet",
+    "security.f2.title": "Verschlüsselte Daten",
+    "security.f2.desc": "Maximale Sicherheit durch End-to-End-Verschlüsselung",
+    "security.f3.title": "Hochleistungsserver",
+    "security.f3.desc": "Enterprise-Infrastruktur für unterbrechungsfreien Service",
+    "security.badge1": "SSL-Zertifiziert",
+    "security.badge2": "DSGVO-konform",
+    "security.badge3": "256-Bit-Verschlüsselung",
+    "security.badge4": "99,9% Verfügbarkeit",
+    
+    // Statistics
+    "stats.title": "diKey in Zahlen",
+    "stats.subtitle": "Konkrete Kennzahlen für Vertrauen und Erfolg",
+    
+    // CTA
+    "cta.title": "Verpasse es nicht",
+    "cta.subtitle": "Die besten Angebote in deiner Nähe, überraschende Sonderrabatte",
+    
+    // FAQ
+    "faq.title": "Häufig gestellte Fragen",
+    "faq.subtitle": "Alles, was du wissen möchtest, findest du hier",
+    "faq.q1": "Was ist diKey?",
+    "faq.a1": "diKey ist eine intelligente Rabattplattform, die es Unternehmen ermöglicht, ihre ruhigen Stunden zu nutzen, und Nutzern hilft, die besten Rabatte in der Nähe zu entdecken. Sie bietet eine Win-Win-Lösung für Unternehmen und Nutzer.",
+    "faq.q2": "Kann ich Informationen über Datenschutz und DSGVO erhalten?",
+    "faq.a2": "diKey legt großen Wert auf den Datenschutz der Nutzer. Alle personenbezogenen Daten werden gemäß DSGVO-Verordnungen verarbeitet und geschützt. Deine Daten sind mit 256-Bit-Verschlüsselung gesichert und werden nicht an Dritte weitergegeben.",
+    "faq.q3": "Wie kann ich mein Konto löschen?",
+    "faq.a3": "Um dein Konto zu löschen, kannst du die Option Einstellungen > Konto > Konto löschen in der App verwenden. Alternativ kannst du eine E-Mail an info@diKey.app senden, um die Kontolöschung anzufordern. Der Vorgang wird innerhalb von 48 Stunden abgeschlossen.",
+    
+    // Footer
+    "footer.tagline": "Eine Welt voller Rabatte. Entdecke jede Stunde die besten Angebote in deiner Nähe.",
+    "footer.contact": "Kontakt",
+    "footer.quickLinks": "Schnellzugriff",
+    "footer.copyright": "© 2025 DiscounTurkey. Alle Rechte vorbehalten.",
+    
+    // Marquee
+    "marquee.1": "Eine Welt voller Rabatte",
+    "marquee.2": "Jede Stunde eine Chance",
+    "marquee.3": "Verpasse es nicht – check diKey",
+    "marquee.4": "Überall Angebote, jederzeit Gewinn",
+
+    // Ad Showcase
+    "ad.headlinePrefix": "Rabatte und Vorteile in der ganzen Stadt. Alles bei",
     "ad.brand": "diKey.",
   },
 };

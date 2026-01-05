@@ -23,11 +23,12 @@ const Navbar = () => {
       <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo */}
-          <a href="#active-deals" className="flex items-center hover-scale">
+          <a href="/" className="flex items-center hover-scale flex-shrink-0 z-10">
             <img 
               src={dikeyLogo} 
               alt="dikey" 
-              className="h-12 sm:h-14"
+              className="h-12 sm:h-14 w-auto object-contain"
+              style={{ display: 'block', minWidth: '120px' }}
             />
           </a>
 

@@ -33,6 +33,13 @@ const Index = () => {
       keywords: "discount, deals, campaign, diKey, coupon, antalya, turkey, savings",
       ogTitle: "diKey - Every Hour An Opportunity",
       ogDescription: "Smart discount platform for businesses and users. Discover the best deals near you."
+    },
+    de: {
+      title: "diKey - Jede Stunde eine Chance | Eine Welt voller Rabatte",
+      description: "Entdecke die besten Rabattangebote in deiner Nähe mit diKey. Intelligente Rabattplattform für Unternehmen und Nutzer. Budgetfreundliche, zeitlich begrenzte Angebote.",
+      keywords: "rabatt, angebote, kampagne, diKey, gutschein, antalya, türkei, sparen",
+      ogTitle: "diKey - Jede Stunde eine Chance",
+      ogDescription: "Intelligente Rabattplattform für Unternehmen und Nutzer. Entdecke die besten Angebote in deiner Nähe."
     }
   };
 
