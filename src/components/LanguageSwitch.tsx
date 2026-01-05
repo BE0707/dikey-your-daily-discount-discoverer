@@ -14,7 +14,6 @@ const LanguageSwitch = () => {
     { code: "tr", label: "Türkçe" },
     { code: "en", label: "English" },
     { code: "de", label: "Deutsch" },
-    { code: "ru", label: "Русский" },
   ];
 
   const currentLanguage = languages.find((lang) => lang.code === language) || languages[0];
@@ -29,11 +28,11 @@ const LanguageSwitch = () => {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => setLanguage(lang.code as "tr" | "en" | "de" | "ru")}
+            onClick={() => setLanguage(lang.code as "tr" | "en" | "de")}
             className={`cursor-pointer ${
               language === lang.code ? "bg-accent font-semibold" : ""
-            }`}
-          >
+        }`}
+      >
             <span className="mr-2">{lang.code.toUpperCase()}</span>
             <span className="text-muted-foreground">{lang.label}</span>
           </DropdownMenuItem>
