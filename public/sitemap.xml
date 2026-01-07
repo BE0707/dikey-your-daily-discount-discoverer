@@ -1,40 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Ana Sayfa - Türkçe -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Ana Sayfa -->
+  <!-- Not: Çok dilli URL yapısı (/en/, /de/) henüz oluşturulmadı. -->
+  <!-- Bu sayfalar eklendiğinde sitemap güncellenecek ve hreflang tag'leri eklenecek. -->
   <url>
     <loc>https://dikeyapp.com/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://dikeyapp.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://dikeyapp.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://dikeyapp.com/de/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dikeyapp.com/" />
   </url>
   
-  <!-- Ana Sayfa - İngilizce (gelecekte eklenecek) -->
-  <url>
-    <loc>https://dikeyapp.com/en/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://dikeyapp.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://dikeyapp.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://dikeyapp.com/de/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dikeyapp.com/" />
-  </url>
-  
-  <!-- Ana Sayfa - Almanca (gelecekte eklenecek) -->
-  <url>
-    <loc>https://dikeyapp.com/de/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://dikeyapp.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://dikeyapp.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://dikeyapp.com/de/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dikeyapp.com/" />
-  </url>
+  <!-- Gelecekte eklenecek sayfalar:
+  - /en/ (İngilizce ana sayfa)
+  - /de/ (Almanca ana sayfa)
+  - /gizlilik (Gizlilik Politikası)
+  - /kullanim-kosullari (Kullanım Koşulları)
+  - /iletisim (İletişim)
+  -->
 </urlset>
 
