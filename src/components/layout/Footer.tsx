@@ -18,7 +18,6 @@ const Footer = () => {
     <footer id="iletisim" className="bg-foreground text-background py-20">
       <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-          {/* Logo & Tagline */}
           <div className="lg:col-span-2">
             <motion.img 
               src={dikeyLogo} 
@@ -31,7 +30,6 @@ const Footer = () => {
               {t("footer.tagline")}
             </p>
             
-            {/* App Store buttons */}
             <div className="flex flex-wrap gap-3">
               <a 
                 href="https://apps.apple.com/tr/app/diKey/id6753873918?l=tr"
@@ -60,7 +58,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-6">{t("footer.contact")}</h4>
             <ul className="space-y-4">
@@ -91,7 +88,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-6">{t("footer.quickLinks")}</h4>
             <ul className="space-y-3">
@@ -111,7 +107,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-background/10 text-center">
           <p className="text-background/40 text-sm">
             {t("footer.copyright")}

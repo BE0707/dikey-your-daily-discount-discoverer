@@ -22,7 +22,6 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/30">
       <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-18">
-          {/* Logo */}
           <a href="/" className="flex items-center hover-scale flex-shrink-0 z-10">
             <img 
               src={dikeyLogo} 
@@ -32,7 +31,6 @@ const Navbar = () => {
             />
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
@@ -48,7 +46,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA - App Store buttons + Language Switch */}
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitch />
             <div className="w-px h-6 bg-border/50" />
@@ -80,7 +77,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-foreground"
@@ -91,7 +87,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -102,7 +97,6 @@ const Navbar = () => {
             className="lg:hidden bg-background border-b border-border"
           >
             <div className="container-narrow mx-auto px-6 py-6 space-y-1">
-              {/* Language Switch - Mobile */}
               <div className="flex justify-center pb-4 border-b border-border/30 mb-4">
                 <LanguageSwitch />
               </div>

@@ -13,7 +13,6 @@ const CatchSection = () => {
 
   return (
     <section ref={ref} className="section-padding relative overflow-hidden">
-      {/* Subtle background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-background" />
       <div
         className="absolute inset-0 flex items-end justify-center pointer-events-none"
@@ -63,7 +62,6 @@ const CatchSection = () => {
             {t("catch.description")}
           </p>
 
-          {/* Animated discount tags */}
           <div className="relative h-24 max-w-2xl mx-auto">
             {discounts.map((discount, index) => (
               <motion.div

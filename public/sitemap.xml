@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Ana Sayfa -->
-  <!-- Not: Çok dilli URL yapısı (/en/, /de/) henüz oluşturulmadı. -->
-  <!-- Bu sayfalar eklendiğinde sitemap güncellenecek ve hreflang tag'leri eklenecek. -->
   <url>
     <loc>https://dikeyapp.com/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Gelecekte eklenecek sayfalar:
-  - /en/ (İngilizce ana sayfa)
-  - /de/ (Almanca ana sayfa)
-  - /gizlilik (Gizlilik Politikası)
-  - /kullanim-kosullari (Kullanım Koşulları)
-  - /iletisim (İletişim)
-  -->
 </urlset>
 

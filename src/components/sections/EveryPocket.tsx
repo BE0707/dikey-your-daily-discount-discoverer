@@ -26,7 +26,6 @@ const EveryPocket = () => {
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center text-center lg:text-left"
         >
-          {/* Text column */}
           <div className="order-2 lg:order-1 space-y-8">
             <div>
               <h2 className="font-heading font-bold mb-4 text-3xl sm:text-4xl">
@@ -54,7 +53,6 @@ const EveryPocket = () => {
               ))}
             </div>
 
-            {/* Decorative Elements */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -76,7 +74,6 @@ const EveryPocket = () => {
             </motion.div>
           </div>
 
-          {/* Visual column */}
           <motion.div
             className="order-1 lg:order-2 relative max-w-sm sm:max-w-md lg:max-w-lg mx-auto w-full"
             initial={{ opacity: 0, x: 24 }}

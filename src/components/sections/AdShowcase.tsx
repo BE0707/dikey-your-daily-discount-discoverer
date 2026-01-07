@@ -92,8 +92,6 @@ const AdShowcase = () => {
               );
             })}
           </div>
-
-          {/* Indicators removed per request */}
         </div>
       </div>
     </section>

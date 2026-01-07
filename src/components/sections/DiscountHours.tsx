@@ -41,7 +41,6 @@ const DiscountHours = () => {
           <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-primary/15 via-primary/5 to-transparent pointer-events-none" />
           <div className="relative rounded-[26px] bg-background/85 backdrop-blur-sm border border-primary/10 p-6 sm:p-8 lg:p-12">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -90,7 +89,6 @@ const DiscountHours = () => {
             </div>
           </motion.div>
 
-          {/* Visual */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -98,7 +96,6 @@ const DiscountHours = () => {
             className="relative"
           >
             <div className="relative bg-secondary/30 rounded-3xl p-8 border border-border/30">
-              {/* Mock Phone UI */}
               <div className="relative bg-background rounded-2xl p-6 space-y-4 shadow-soft">
                 <div className="flex items-center gap-3">
                   <motion.div 

@@ -63,10 +63,8 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
-      {/* Subtle Gradient Base */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
 
-      {/* Hero imagery with Apple-like soft overlay */}
       <picture className="pointer-events-none absolute inset-0">
         <source media="(min-width: 768px)" srcSet={heroDesktop} />
         <img
@@ -77,15 +75,12 @@ const HeroSection = () => {
         />
       </picture>
 
-      {/* Soft mask to keep text readable */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/65 to-background/75 backdrop-blur-[2px]" />
 
-      {/* Minimal Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:80px_80px] opacity-10" />
 
       <div className="container-narrow mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -102,7 +97,6 @@ const HeroSection = () => {
           />
           </motion.div>
 
-          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,7 +107,6 @@ const HeroSection = () => {
             <span>{t("hero.badge")}</span>
           </motion.div>
 
-          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,7 +118,6 @@ const HeroSection = () => {
             <span className="text-primary">{t("hero.title2")}</span>
           </motion.h1>
 
-          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -136,7 +128,6 @@ const HeroSection = () => {
             {t("hero.subtitle")}
           </motion.p>
 
-          {/* App Store Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -169,7 +160,6 @@ const HeroSection = () => {
             </a>
           </motion.div>
 
-          {/* Stats Preview */}
           <motion.div
             ref={statsRef}
             initial={{ opacity: 0, y: 30 }}

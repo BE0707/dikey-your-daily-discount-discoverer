@@ -46,11 +46,9 @@ const Index = () => {
 
   const seo = seoContent[language];
 
-  // Schema.org JSON-LD Markup
   const schemaMarkup = useMemo(() => {
     const baseUrl = "https://dikeyapp.com";
     
-    // Organization Schema
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -74,7 +72,6 @@ const Index = () => {
       ]
     };
 
-    // MobileApplication Schema
     const mobileAppSchema = {
       "@context": "https://schema.org",
       "@type": "MobileApplication",
@@ -104,7 +101,6 @@ const Index = () => {
         : "https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
     };
 
-    // FAQPage Schema
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -155,7 +151,6 @@ const Index = () => {
         <link rel="canonical" href="https://dikeyapp.com" />
       </Helmet>
       
-      {/* Schema.org JSON-LD Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
