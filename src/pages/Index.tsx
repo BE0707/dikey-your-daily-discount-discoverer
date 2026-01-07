@@ -22,25 +22,25 @@ const Index = () => {
   
   const seoContent = {
     tr: {
-      title: "diKey - Her Saat Bir Fırsat | İndirimlerle Dolu Bir Dünya",
-      description: "diKey ile yakınındaki en iyi indirim fırsatlarını keşfet. İşletmeler ve kullanıcılar için akıllı indirim platformu. Bütçe dostu, zamana özel fırsatlar.",
-      keywords: "indirim, fırsat, kampanya, diKey, discount, kupon, antalya, türkiye",
-      ogTitle: "diKey - Her Saat Bir Fırsat",
-      ogDescription: "İşletmeler ve kullanıcılar için akıllı indirim platformu. Yakınındaki en iyi fırsatları keşfet."
+      title: "diKey - Antalya'da Anlık İndirim Uygulaması | QR ile Kasada İndirim",
+      description: "Konumuna ve saate göre Antalya'daki en iyi fırsatları keşfet. Restoran, kafe ve güzellik merkezlerinde QR kod ile anında indirim kazan. Ücretsiz indir.",
+      keywords: "antalya indirim, antalya fırsat, indirim uygulaması, QR kod indirim, diKey, antalya kafe indirimleri, antalya restoran fırsatları, anlık indirim",
+      ogTitle: "diKey - Antalya'da Anlık İndirim Uygulaması",
+      ogDescription: "Antalya'daki en iyi indirim fırsatlarını keşfet. QR kod ile anında indirim kazan."
     },
     en: {
-      title: "diKey - Every Hour An Opportunity | A World Full of Discounts",
-      description: "Discover the best discount opportunities near you with diKey. Smart discount platform for businesses and users. Budget-friendly, time-specific deals.",
-      keywords: "discount, deals, campaign, diKey, coupon, antalya, turkey, savings",
-      ogTitle: "diKey - Every Hour An Opportunity",
-      ogDescription: "Smart discount platform for businesses and users. Discover the best deals near you."
+      title: "diKey - Instant Discount App in Antalya | QR Code Discounts at Checkout",
+      description: "Discover the best discount opportunities in Antalya based on your location and time. Get instant discounts with QR code at restaurants, cafes and beauty centers. Download free.",
+      keywords: "antalya discount, antalya deals, discount app, QR code discount, diKey, antalya cafe discounts, antalya restaurant deals, instant discount",
+      ogTitle: "diKey - Instant Discount App in Antalya",
+      ogDescription: "Discover the best discount opportunities in Antalya. Get instant discounts with QR code."
     },
     de: {
-      title: "diKey - Jede Stunde eine Chance | Eine Welt voller Rabatte",
-      description: "Entdecke die besten Rabattangebote in deiner Nähe mit diKey. Intelligente Rabattplattform für Unternehmen und Nutzer. Budgetfreundliche, zeitlich begrenzte Angebote.",
-      keywords: "rabatt, angebote, kampagne, diKey, gutschein, antalya, türkei, sparen",
-      ogTitle: "diKey - Jede Stunde eine Chance",
-      ogDescription: "Intelligente Rabattplattform für Unternehmen und Nutzer. Entdecke die besten Angebote in deiner Nähe."
+      title: "diKey - Sofortrabatt-App in Antalya | QR-Code-Rabatte an der Kasse",
+      description: "Entdecke die besten Rabattangebote in Antalya basierend auf deinem Standort und der Uhrzeit. Erhalte sofortige Rabatte mit QR-Code in Restaurants, Cafés und Beauty-Centern. Kostenlos herunterladen.",
+      keywords: "antalya rabatt, antalya angebote, rabatt app, QR-code rabatt, diKey, antalya café rabatte, antalya restaurant angebote, sofortrabatt",
+      ogTitle: "diKey - Sofortrabatt-App in Antalya",
+      ogDescription: "Entdecke die besten Rabattangebote in Antalya. Erhalte sofortige Rabatte mit QR-Code."
     }
   };
 
@@ -149,6 +149,10 @@ const Index = () => {
         <meta property="og:description" content={seo.ogDescription} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://dikeyapp.com" />
+        <link rel="alternate" hreflang="tr" href="https://dikeyapp.com" />
+        <link rel="alternate" hreflang="en" href="https://dikeyapp.com" />
+        <link rel="alternate" hreflang="de" href="https://dikeyapp.com" />
+        <link rel="alternate" hreflang="x-default" href="https://dikeyapp.com" />
       </Helmet>
       
       <script

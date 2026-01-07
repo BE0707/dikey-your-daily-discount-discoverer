@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Sparkles } from "lucide-react";
-import dikeyLogo from "@/assets/dikey-logo.png";
+import dikeyLogo from "@/assets/horizontalLogoNoBG.png";
 import heroDesktop from "@/assets/hero-desktop.png";
 import heroMobile from "@/assets/hero-mobile.png";
 import { useLanguage } from "@/context/LanguageContext";
