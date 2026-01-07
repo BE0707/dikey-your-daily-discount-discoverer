@@ -15,9 +15,10 @@ import Security from "@/components/sections/Security";
 import CTASection from "@/components/sections/CTASection";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/layout/Footer";
+import { useMemo } from "react";
 
 const Index = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   
   const seoContent = {
     tr: {
@@ -45,6 +46,103 @@ const Index = () => {
 
   const seo = seoContent[language];
 
+  // Schema.org JSON-LD Markup
+  const schemaMarkup = useMemo(() => {
+    const baseUrl = "https://dikeyapp.com";
+    
+    // Organization Schema
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "diKey",
+      "alternateName": "diKey - Her Saat Bir Fırsat",
+      "url": baseUrl,
+      "logo": `${baseUrl}/dikey-logo.png`,
+      "description": language === "tr" 
+        ? "İşletmeler ve kullanıcılar için akıllı indirim platformu"
+        : language === "en"
+        ? "Smart discount platform for businesses and users"
+        : "Intelligente Rabattplattform für Unternehmen und Nutzer",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@diKey.app",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://apps.apple.com/tr/app/diKey/id6753873918",
+        "https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+      ]
+    };
+
+    // MobileApplication Schema
+    const mobileAppSchema = {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "diKey",
+      "applicationCategory": "ShoppingApplication",
+      "operatingSystem": ["iOS", "Android"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "1000"
+      },
+      "applicationSubCategory": "Discount & Coupon App",
+      "description": language === "tr"
+        ? "Yakınındaki en iyi indirim fırsatlarını keşfet. QR kod ile anında indirim kazan."
+        : language === "en"
+        ? "Discover the best discount opportunities near you. Get instant discounts with QR code."
+        : "Entdecke die besten Rabattangebote in deiner Nähe. Erhalte sofortige Rabatte mit QR-Code.",
+      "screenshot": `${baseUrl}/appimage.png`,
+      "softwareVersion": "1.0",
+      "downloadUrl": language === "tr"
+        ? "https://apps.apple.com/tr/app/diKey/id6753873918?l=tr"
+        : "https://play.google.com/store/apps/details?id=com.dikey.discounturkey"
+    };
+
+    // FAQPage Schema
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": t("faq.q1"),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": t("faq.a1")
+          }
+        },
+        {
+          "@type": "Question",
+          "name": t("faq.q2"),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": t("faq.a2")
+          }
+        },
+        {
+          "@type": "Question",
+          "name": t("faq.q3"),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": t("faq.a3")
+          }
+        }
+      ]
+    };
+
+    return {
+      organization: organizationSchema,
+      mobileApp: mobileAppSchema,
+      faq: faqSchema
+    };
+  }, [language, t]);
+
   return (
     <>
       <Helmet>
@@ -54,8 +152,28 @@ const Index = () => {
         <meta property="og:title" content={seo.ogTitle} />
         <meta property="og:description" content={seo.ogDescription} />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://diKey.app" />
+        <link rel="canonical" href="https://dikeyapp.com" />
       </Helmet>
+      
+      {/* Schema.org JSON-LD Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemaMarkup.organization),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemaMarkup.mobileApp),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemaMarkup.faq),
+        }}
+      />
 
       <main className="min-h-screen bg-background">
         <Navbar />

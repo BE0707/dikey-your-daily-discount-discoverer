@@ -1,0 +1,52 @@
+{
+  "name": "diKey - Her Saat Bir Fırsat",
+  "short_name": "diKey",
+  "description": "İşletmeler ve kullanıcılar için akıllı indirim platformu. Yakınındaki en iyi fırsatları keşfet, anında kazan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "tr",
+  "dir": "ltr",
+  "categories": ["shopping", "business", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Fırsatları Keşfet",
+      "short_name": "Fırsatlar",
+      "description": "Yakınındaki indirim fırsatlarını görüntüle",
+      "url": "/",
+      "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.dikey.discounturkey",
+      "id": "com.dikey.discounturkey"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/tr/app/diKey/id6753873918",
+      "id": "6753873918"
+    }
+  ],
+  "prefer_related_applications": true
+}
+
