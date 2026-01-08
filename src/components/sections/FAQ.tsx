@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -68,7 +69,58 @@ const FAQ = () => {
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
-                    {faq.answer}
+                    {faq.answer.includes("{privacyLink}") || faq.answer.includes("{termsLink}") ? (
+                      (() => {
+                        const content = faq.answer;
+                        const parts: (string | JSX.Element)[] = [];
+                        let lastIndex = 0;
+
+                        const pushText = (toIndex: number) => {
+                          if (toIndex > lastIndex) {
+                            parts.push(content.substring(lastIndex, toIndex));
+                          }
+                        };
+
+                        const addLink = (key: "privacy" | "terms", textKey: "faq.a2.privacyLinkText" | "faq.a2.termsLinkText", to: string) => {
+                          parts.push(
+                            <Link
+                              key={key}
+                              to={to}
+                              className="text-primary hover:text-primary/80 underline font-medium transition-colors duration-300"
+                            >
+                              {t(textKey)}
+                            </Link>
+                          );
+                        };
+
+                        // Handle privacy link
+                        const privacyToken = "{privacyLink}";
+                        const privacyIndex = content.indexOf(privacyToken);
+                        if (privacyIndex !== -1) {
+                          pushText(privacyIndex);
+                          addLink("privacy", "faq.a2.privacyLinkText", "/gizlilik-politikasi");
+                          lastIndex = privacyIndex + privacyToken.length;
+                        }
+
+                        // Handle terms link
+                        const termsToken = "{termsLink}";
+                        const termsIndex = content.indexOf(termsToken);
+                        if (termsIndex !== -1) {
+                          pushText(termsIndex);
+                          addLink("terms", "faq.a2.termsLinkText", "/kullanim-kosullari");
+                          lastIndex = termsIndex + termsToken.length;
+                        }
+
+                        // Remaining text
+                        if (lastIndex < content.length) {
+                          parts.push(content.substring(lastIndex));
+                        }
+
+                        return <>{parts}</>;
+                      })()
+                    ) : (
+                      faq.answer
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               </motion.div>

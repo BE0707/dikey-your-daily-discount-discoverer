@@ -7,6 +7,8 @@ import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,8 @@ const App = () => (
           <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/gizlilik-politikasi" element={<PrivacyPolicy />} />
+              <Route path="/kullanim-kosullari" element={<TermsOfUse />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
