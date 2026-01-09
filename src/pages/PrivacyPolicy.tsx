@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
-        <link rel="canonical" href="https://dikeyapp.com/gizlilik-politikasi" />
+        <link rel="canonical" href="https://dikeyapp.com/gizlilik-politikasi-2026" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

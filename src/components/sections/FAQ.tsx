@@ -98,7 +98,7 @@ const FAQ = () => {
                         const privacyIndex = content.indexOf(privacyToken);
                         if (privacyIndex !== -1) {
                           pushText(privacyIndex);
-                          addLink("privacy", "faq.a2.privacyLinkText", "/gizlilik-politikasi");
+                          addLink("privacy", "faq.a2.privacyLinkText", "/gizlilik-politikasi-2026");
                           lastIndex = privacyIndex + privacyToken.length;
                         }
 
