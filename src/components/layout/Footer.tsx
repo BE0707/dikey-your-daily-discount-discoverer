@@ -94,7 +94,7 @@ const Footer = () => {
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a 
-                    href={link.href}
+                    href={link.external ? link.href : `/${link.href.replace(/^#?/, "#")}`}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
                     className="text-sm text-background/50 hover:text-background transition-colors duration-300 hover:translate-x-1 inline-block"

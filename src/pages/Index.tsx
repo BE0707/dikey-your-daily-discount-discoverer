@@ -45,10 +45,17 @@ const Index = () => {
   };
 
   const seo = seoContent[language];
+  const baseUrl = "https://dikeyapp.com";
+  const canonicalUrl = language === "tr" ? baseUrl : `${baseUrl}/?lang=${language}`;
+  const hreflangUrls: Record<string, string> = {
+    tr: baseUrl,
+    en: `${baseUrl}/?lang=en`,
+    de: `${baseUrl}/?lang=de`,
+    "x-default": baseUrl,
+  };
+  const socialImage = `${baseUrl}/dikey-logo.png`;
 
   const schemaMarkup = useMemo(() => {
-    const baseUrl = "https://dikeyapp.com";
-    
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -148,11 +155,18 @@ const Index = () => {
         <meta property="og:title" content={seo.ogTitle} />
         <meta property="og:description" content={seo.ogDescription} />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://dikeyapp.com" />
-        <link rel="alternate" hreflang="tr" href="https://dikeyapp.com" />
-        <link rel="alternate" hreflang="en" href="https://dikeyapp.com" />
-        <link rel="alternate" hreflang="de" href="https://dikeyapp.com" />
-        <link rel="alternate" hreflang="x-default" href="https://dikeyapp.com" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="diKey logo" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seo.ogTitle} />
+        <meta name="twitter:description" content={seo.ogDescription} />
+        <meta name="twitter:image" content={socialImage} />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hreflang="tr" href={hreflangUrls.tr} />
+        <link rel="alternate" hreflang="en" href={hreflangUrls.en} />
+        <link rel="alternate" hreflang="de" href={hreflangUrls.de} />
+        <link rel="alternate" hreflang="x-default" href={hreflangUrls["x-default"]} />
       </Helmet>
       
       <script

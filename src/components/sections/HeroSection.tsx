@@ -72,6 +72,10 @@ const HeroSection = () => {
           alt=""
           className="h-full w-full object-cover opacity-70 mix-blend-normal"
           loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          width={1024}
+          height={1536}
         />
       </picture>
 

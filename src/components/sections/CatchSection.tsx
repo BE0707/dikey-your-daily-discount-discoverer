@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { UtensilsCrossed, Bone, Scissors, Percent } from "lucide-react";
-import sign from "@/assets/sign.svg";
+import sign from "@/assets/sign.png";
 import { useLanguage } from "@/context/LanguageContext";
 
 const CatchSection = () => {
@@ -13,20 +13,25 @@ const CatchSection = () => {
 
   return (
     <section ref={ref} className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white" />
       <div
         className="absolute inset-0 flex items-end justify-center pointer-events-none"
         style={{ transform: "translateY(60%)" }}
+        aria-hidden
       >
-        <img
-          src={sign}
-          alt="diKey background mark"
+        <div
           className="h-[1242px] w-[1242px] opacity-10"
           style={{
-            filter:
-              "invert(22%) sepia(94%) saturate(4115%) hue-rotate(353deg) brightness(88%) contrast(104%)",
+            WebkitMaskImage: `url(${sign})`,
+            maskImage: `url(${sign})`,
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskSize: "contain",
+            maskSize: "contain",
+            WebkitMaskPosition: "center",
+            maskPosition: "center",
+            backgroundColor: "hsl(var(--primary))",
           }}
-          loading="lazy"
         />
       </div>
       
