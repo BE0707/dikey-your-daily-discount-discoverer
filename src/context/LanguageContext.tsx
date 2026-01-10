@@ -341,10 +341,10 @@ const translations: Record<Language, Record<string, string>> = {
   },
   de: {
     // Navbar
-    "nav.howItWorks": "Wie es geht",
-    "nav.faq": "FAQ",
-    "nav.businessRegister": "Registrieren",
-    "nav.businessLogin": "Login",
+    "nav.howItWorks": "Wie funktioniert es?",
+    "nav.faq": "Häufige Fragen",
+    "nav.businessRegister": "Unternehmensregistrierung",
+    "nav.businessLogin": "Unternehmenslogin",
     "nav.privacy": "Datenschutz",
     "nav.contact": "Kontakt",
     

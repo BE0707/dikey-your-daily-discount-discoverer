@@ -8,15 +8,6 @@ import BemilyFamily from "@/assets/PartnerLogos/BemilyFamily.png";
 import BostonDrinkDessert from "@/assets/PartnerLogos/BostonDrinkDessert.png";
 import Understone from "@/assets/PartnerLogos/Understone.png";
 import VipTrainingClub from "@/assets/PartnerLogos/VipTrainingClub.png";
-import OttoBrosBurger from "@/assets/PartnerLogos/OttoBrosBurger.png";
-import PusulaKirtasiye from "@/assets/PartnerLogos/Pusulakırtasiye.png";
-import AuraClub from "@/assets/PartnerLogos/AuraClub.png";
-import MilaFlowers from "@/assets/PartnerLogos/Milaflowers.png";
-import Therabliss from "@/assets/PartnerLogos/therabliss.png";
-import SixtyOneHamsitava from "@/assets/PartnerLogos/61Hamsitava.png";
-import LuckyMonkey from "@/assets/PartnerLogos/LuckyMonkey.png";
-import SohoClub from "@/assets/PartnerLogos/SohoCLub.png";
-import YogartFrozenYogurt from "@/assets/PartnerLogos/YogartFrozenYogurt.png";
 
 const partners = [
   { name: "Badlands Bistro Pub", logo: Badlands },
@@ -24,15 +15,6 @@ const partners = [
   { name: "Understone Cafe Konyaaltı", logo: Understone },
   { name: "Bemily Family Cafe", logo: BemilyFamily },
   { name: "Boston Drink & Dessert", logo: BostonDrinkDessert },
-  { name: "Otto Bros Burger", logo: OttoBrosBurger },
-  { name: "Pusula Kırtasiye Kültür", logo: PusulaKirtasiye },
-  { name: "Aura Club Kemer", logo: AuraClub },
-  { name: "Mila Flowers", logo: MilaFlowers },
-  { name: "Therabliss SPA Massage & Beauty", logo: Therabliss },
-  { name: "61 Hamsitava", logo: SixtyOneHamsitava },
-  { name: "Lucky Monkey Hotel & Restaurant", logo: LuckyMonkey },
-  { name: "Soho Club", logo: SohoClub },
-  { name: "Yogart Frozen Yogurt", logo: YogartFrozenYogurt },
 ];
 
 const PartnerCarousel = () => {
