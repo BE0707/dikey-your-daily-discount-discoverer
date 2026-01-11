@@ -22,10 +22,6 @@ const CatchSection = () => {
           src={sign}
           alt="diKey background mark"
           className="h-[1242px] w-[1242px] opacity-10"
-          style={{
-            filter:
-              "invert(22%) sepia(94%) saturate(4115%) hue-rotate(353deg) brightness(88%) contrast(104%)",
-          }}
           loading="lazy"
         />
       </div>

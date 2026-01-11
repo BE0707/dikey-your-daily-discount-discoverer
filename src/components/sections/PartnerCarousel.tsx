@@ -3,18 +3,40 @@ import { useRef, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Import partner logos
+import Hamsitava from "@/assets/PartnerLogos/61Hamsitava.png";
+import AntalyaPet from "@/assets/PartnerLogos/AntalyaPet.png";
+import AuraClub from "@/assets/PartnerLogos/AuraClub.png";
 import Badlands from "@/assets/PartnerLogos/Badlands.png";
 import BemilyFamily from "@/assets/PartnerLogos/BemilyFamily.png";
 import BostonDrinkDessert from "@/assets/PartnerLogos/BostonDrinkDessert.png";
+import KasapHasan from "@/assets/PartnerLogos/KasapHasan.png";
+import LuckyMonkey from "@/assets/PartnerLogos/LuckyMonkey.png";
+import MilaFlowers from "@/assets/PartnerLogos/Milaflowers.png";
+import OttoBrosBurger from "@/assets/PartnerLogos/OttoBrosBurger.png";
+import PusulaKirtasiye from "@/assets/PartnerLogos/Pusulakırtasiye.png";
+import SohoClub from "@/assets/PartnerLogos/SohoCLub.png";
+import Therabliss from "@/assets/PartnerLogos/therabliss.png";
 import Understone from "@/assets/PartnerLogos/Understone.png";
 import VipTrainingClub from "@/assets/PartnerLogos/VipTrainingClub.png";
+import YogartFrozenYogurt from "@/assets/PartnerLogos/YogartFrozenYogurt.png";
 
 const partners = [
+  { name: "61 Hamsitava", logo: Hamsitava },
+  { name: "AntalyaPet", logo: AntalyaPet },
+  { name: "Aura Club", logo: AuraClub },
   { name: "Badlands Bistro Pub", logo: Badlands },
-  { name: "VIP Training Club", logo: VipTrainingClub },
-  { name: "Understone Cafe Konyaaltı", logo: Understone },
   { name: "Bemily Family Cafe", logo: BemilyFamily },
   { name: "Boston Drink & Dessert", logo: BostonDrinkDessert },
+  { name: "Kasap Hasan", logo: KasapHasan },
+  { name: "Lucky Monkey", logo: LuckyMonkey },
+  { name: "Mila Flowers", logo: MilaFlowers },
+  { name: "Otto Bros Burger", logo: OttoBrosBurger },
+  { name: "Pusula Kırtasiye Kültür", logo: PusulaKirtasiye },
+  { name: "Soho Club", logo: SohoClub },
+  { name: "Therabliss SPA & Masaj", logo: Therabliss },
+  { name: "Understone Cafe Konyaaltı", logo: Understone },
+  { name: "VIP Training Club", logo: VipTrainingClub },
+  { name: "Yogart Frozen Yogurt", logo: YogartFrozenYogurt },
 ];
 
 const PartnerCarousel = () => {
