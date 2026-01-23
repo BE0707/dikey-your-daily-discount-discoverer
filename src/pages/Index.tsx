@@ -148,6 +148,13 @@ const Index = () => {
         <meta property="og:title" content={seo.ogTitle} />
         <meta property="og:description" content={seo.ogDescription} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://dikeyapp.com/dikey-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://dikeyapp.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@diKeyapp" />
+        <meta name="twitter:image" content="https://dikeyapp.com/dikey-logo.png" />
         <link rel="canonical" href="https://dikeyapp.com" />
         <link rel="alternate" hreflang="tr" href="https://dikeyapp.com" />
         <link rel="alternate" hreflang="en" href="https://dikeyapp.com" />
